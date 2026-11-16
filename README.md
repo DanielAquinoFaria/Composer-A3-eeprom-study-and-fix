@@ -1,78 +1,45 @@
-# Composer A3 eeprom study and fix
+# Composer A3 EEPROM Study and Fix
 
-**Problema resolvido com a gravação externa da EEPROM AT24C256C usando Arduino Uno.** Em 16/11/2026, o responsável pela máquina confirmou a resolução e identificou o arquivo usado como `AT24C256C_Composer_A3_1.0.5_MKA_sem_SN.bin`.
+**Issue resolved via external programming of the AT24C256C EEPROM using an Arduino Uno.** On 11/16/2026, the machine operator confirmed the resolution and identified the file used as `AT24C256C_Composer_A3_1.0.5_MKA_sem_SN.bin`.
 
-Este repositório reúne o caminho da investigação, as evidências, os firmwares disponíveis e o software completo do gravador. O relato de sucesso é do operador; os testes automatizados desta entrega verificam arquivos e software, sem operar a impressora.
+This repository compiles the investigation process, evidence, available firmwares, and complete programmer software. The success report comes from the operator; the automated tests in this release verify files and software without operating the printer.
 
-## Resumo da operação realizada
+## Summary of the Operation Performed
 
-A Composer A3 apresentava movimento anômalo no eixo Y durante a troca de ferramenta, permanência na tela de inicialização e mensagens de erro de configuração da EEPROM. Regravar o firmware da controladora e zerar os offsets dos bicos pelo menu não eliminou o problema observado.
+The Composer A3 exhibited anomalous Y-axis movement during tool changes, froze on the boot screen, and displayed EEPROM configuration error messages. Reflashing the controller firmware and zeroing the nozzle offsets via the menu did not eliminate the observed issue.
 
-1. **Investigação:** foram reunidos logs de boot e gravação, código-fonte MKA, perfis de configuração e documentação do hardware para distinguir o programa na Flash dos parâmetros persistidos na EEPROM externa.
-2. **Preservação e comparação:** seis dumps de 32.768 bytes, em dois grupos de três capturas idênticas, permitiram localizar o campo `switch_offset_y` no endereço `0x0046`. No grupo com erro de magnitude, os bytes `04 01 85 DB` representam **−74.874.577.188.028.416**, mesmo com CRC USER válido. Os blocos SYSTEM eram iguais entre os dois grupos e a referência.
-3. **Reconstrução:** uma imagem completa da AT24C256C foi gerada a partir dos defaults e inicializações do fonte MKA, aplicando os 53 comandos do perfil `Composer A3-1.0.5.gc`. Os offsets de troca foram definidos em zero, os presets e demais parâmetros foram reconstruídos, os CRCs foram calculados e o número de série foi deixado vazio.
-4. **Gravação externa:** a imagem foi gravada na EEPROM com **Arduino Uno**, usando o firmware do gravador e a interface Python/Tkinter incluídos neste projeto. O software oferece backup, leitura, escrita, releitura e comparação integral.
-5. **Resultado:** o operador confirmou que a gravação dessa imagem resolveu o problema e identificou expressamente o arquivo utilizado. Os testes do software e da integridade dos arquivos estão documentados separadamente do resultado físico informado.
+1. **Investigation:** Boot and flashing logs, MKA source code, configuration profiles, and hardware documentation were gathered to distinguish the program stored in Flash from the parameters persisted in the external EEPROM.
+2. **Preservation and comparison:** Six 32,768-byte dumps, split into two groups of three identical captures, made it possible to locate the `switch_offset_y` field at address `0x0046`. In the group with the magnitude error, the bytes `04 01 85 DB` represent **−74,874,577,188,028,416**, even with a valid USER CRC. The SYSTEM blocks were identical across both groups and the reference.
+3. **Reconstruction:** A complete AT24C256C image was generated from the MKA source defaults and initializations, applying the 53 commands from the `Composer A3-1.0.5.gc` profile. Tool-change offsets were set to zero, presets and remaining parameters were reconstructed, CRCs were calculated, and the serial number was left blank.
+4. **External programming:** The image was flashed onto the EEPROM with an **Arduino Uno**, using the programmer firmware and Python/Tkinter interface included in this project. The software provides backup, read, write, read-back, and full comparison features.
+5. **Result:** The operator confirmed that flashing this image resolved the issue and explicitly identified the file used. Software and file integrity tests are documented separately from the reported physical outcome.
 
-A conclusão central é que **CRC válido não garante parâmetros de movimento válidos**. A recuperação restabeleceu uma configuração conhecida; a origem inicial da alteração dos bytes continua indeterminada. As melhorias sugeridas para o MKA são recomendações e não foram implementadas como parte desta recuperação.
+The core conclusion is that **a valid CRC does not guarantee valid motion parameters**. The recovery restored a known configuration; the initial root cause of the byte alteration remains undetermined. Suggested improvements for MKA are recommendations and were not implemented as part of this recovery.
 
-**English summary:** This project documents an Anisoprint Composer A3 recovery achieved by externally programming a reconstructed AT24C256C EEPROM image with an Arduino Uno. Six EEPROM dumps revealed an invalid tool-change Y offset despite a valid USER CRC. A complete configuration image was rebuilt from MKA defaults and the Composer A3-1.0.5 profile, and the operator confirmed recovery. The original cause of the altered bytes remains undetermined. Full reports are available in Brazilian Portuguese and English below.
+**Resumo em português:** Este projeto documenta a recuperação de uma Anisoprint Composer A3 realizada por meio da gravação externa de uma imagem reconstruída da EEPROM AT24C256C com Arduino Uno. Seis dumps da EEPROM revelaram um offset de troca no eixo Y inválido, mesmo com CRC USER válido. Uma imagem completa de configuração foi reconstruída a partir dos defaults do MKA e do perfil Composer A3-1.0.5, e o operador confirmou a recuperação. A causa original da alteração dos bytes permanece indeterminada. Os relatórios completos estão disponíveis em português brasileiro e inglês abaixo.
 
-## Por onde começar
+## Where to Start
 
-- **Relatórios profissionais em PDF:** [Português brasileiro](docs/relatorios/Relatorio_Recuperacao_EEPROM_Composer_A3_PT-BR.pdf) e [English](docs/relatorios/EEPROM_Recovery_Report_Composer_A3_EN.pdf), nove páginas em cada versão.
-- [Relatório da investigação e resolução](RELATORIO.md): sequência dos acontecimentos, hipóteses, evidências, correções e questões ainda abertas.
-- [Procedimento de recuperação](docs/PROCEDIMENTO.md): montagem, backup, gravação e verificação.
-- [Imagem EEPROM usada na solução](gravador/imagens/AT24C256C_Composer_A3_1.0.5_MKA_sem_SN.bin).
-- [Gravador completo](gravador/README.md): interface Python/Tkinter, firmware Uno, protocolo, testes e ferramentas.
-- [Inventário e versões](docs/INVENTARIO.md), [validação da entrega](docs/VALIDACAO_PACOTE.md) e [publicação no GitHub](docs/PUBLICACAO.md).
+- **Professional PDF Reports:** [Brazilian Portuguese](docs/relatorios/Relatorio_Recuperacao_EEPROM_Composer_A3_PT-BR.pdf) and [English](docs/relatorios/EEPROM_Recovery_Report_Composer_A3_EN.pdf), nine pages each.
+- [Investigation and Resolution Report](RELATORIO.md): timeline of events, hypotheses, evidence, fixes, and open questions.
+- [Recovery Procedure](docs/PROCEDIMENTO.md): wiring, backup, flashing, and verification.
+- [EEPROM Image Used in the Solution](gravador/imagens/AT24C256C_Composer_A3_1.0.5_MKA_sem_SN.bin).
+- [Complete Programmer](gravador/README.md): Python/Tkinter interface, Uno firmware, protocol, tests, and tools.
+- [Inventory and Versions](docs/INVENTARIO.md), [Package Validation](docs/VALIDACAO_PACOTE.md), and [GitHub Publishing](docs/PUBLICACAO.md).
 
-## Arquivo correto para cada destino
+## Correct File for Each Target
 
-| Artefato | Destino | Finalidade |
+| Artifact | Target | Purpose |
 |---|---|---|
-| `gravador/imagens/AT24C256C_Composer_A3_1.0.5_MKA_sem_SN.bin` | EEPROM externa AT24C256C, início `0x0000` | Configuração reconstruída que resolveu este caso; 32.768 bytes |
-| `gravador/firmware/eeprom_uno/eeprom_uno.ino` | Arduino Uno R3 / ATmega328P | Código-fonte do leitor/gravador |
-| `gravador/firmware/precompilado/eeprom_uno.hex` | Flash do Arduino Uno, mantendo seu bootloader | Compilação de conveniência do mesmo gravador |
-| `firmwares/Composer Flasher/Composer A3/.../MKA.bin` ou `.fw2` | Controladora da impressora, pelo fluxo do Composer Flasher | Firmware executável MKA; não é imagem EEPROM |
-| `Composer A3-1.0.5.gc` | Parâmetros interpretados pelo MKA | Perfil usado para reconstruir a configuração |
+| `gravador/imagens/AT24C256C_Composer_A3_1.0.5_MKA_sem_SN.bin` | External AT24C256C EEPROM, starting at `0x0000` | Reconstructed configuration that resolved this case; 32,768 bytes |
+| `gravador/firmware/eeprom_uno/eeprom_uno.ino` | Arduino Uno R3 / ATmega328P | Reader/programmer source code |
+| `gravador/firmware/precompilado/eeprom_uno.hex` | Arduino Uno Flash, preserving its bootloader | Convenience precompiled binary of the same programmer |
+| `firmwares/Composer Flasher/Composer A3/.../MKA.bin` or `.fw2` | Printer controller, via the Composer Flasher workflow | Executable MKA firmware; not an EEPROM image |
+| `Composer A3-1.0.5.gc` | Parameters parsed by MKA | Profile used to reconstruct the configuration |
 
-**Não trocar esses destinos.** A recuperação confirmada foi a escrita da imagem de configuração na EEPROM. O pacote histórico do Flasher está incluído para documentação/reprodução, não como uma etapa obrigatória de nova gravação da controladora.
+**Do not mix up these targets.** The confirmed recovery consisted of writing the configuration image to the EEPROM. The historical Flasher package is included for documentation/reproduction purposes, not as a mandatory step for reflashing the controller.
 
-SHA-256 da imagem EEPROM:
+EEPROM image SHA-256:
 
 ```text
 a54501351980aeef05636856efa92e8a668bbfaf2794a42b80f438af59d0dc1e
-```
-
-Ela contém número de série vazio, perfil de identificação `1.0.5` e defaults USER. Não preserva calibrações individuais anteriores. Sua aplicação a outra máquina exige conferir modelo, hardware, layout e calibrações.
-
-## Executar o gravador
-
-Python 3.10+ com Tcl/Tk e Arduino IDE/Arduino AVR Boards 1.8.6 são instalados separadamente. Na raiz deste repositório:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r gravador/requirements.txt
-.venv\Scripts\python.exe gravador/desktop/app.py
-```
-
-O firmware é carregado pelo Arduino IDE a partir de `gravador/firmware/eeprom_uno/eeprom_uno.ino`, selecionando **Arduino Uno**. A montagem está em [MONTAGEM.md](gravador/hardware/MONTAGEM.md). O modo Simulação permite experimentar a interface sem hardware.
-
-## Organização
-
-```text
-RELATORIO.md             Relatório final, com referências às evidências
-docs/                    Recuperação, inventário, validação e publicação
-gravador/                Projeto completo, imagem final, dumps e fonte MKA
-firmwares/               MKA-firmware, Composer Flasher completo e snapshot MK4duo
-evidencias/              Logs, diagnósticos históricos e leitor ESP32-C3
-referencias/             Datasheets e guia de flashing recebido
-tools/verificar_pacote.py Verificação de integridade sem hardware
-MANIFESTO_SHA256.json     Tamanho e hash dos arquivos da entrega
-THIRD_PARTY_NOTICES.md    Proveniência e escopo das licenças
-```
-
-Os documentos históricos mantêm suas conclusões e limites da época. O relatório final atualiza o estado do caso. Os dumps históricos contêm identificação da máquina; a imagem destinada à recuperação está sem SN.
-
-Para conferir os arquivos: `python tools/verificar_pacote.py`. O manifesto é local e não constitui assinatura digital. As fontes MKA necessárias estão incluídas diretamente; não é necessário clonar dependências ou o projeto REA.
