@@ -35,8 +35,8 @@ Os seis dumps históricos foram preservados integralmente e incluem identificaç
 
 O pacote de publicação não inclui credenciais, ambientes virtuais ou históricos `.git` das fontes. O `.gitignore` evita adicionar arquivos de execução e caches usuais.
 
-A cópia local adicional `firmwares/MKA-firmware/` tem histórico Git próprio e foi
-excluída desta publicação para não criar um submódulo acidental. Seus 661 arquivos
-de conteúdo foram comparados por SHA-256 e são idênticos ao snapshot completo
-versionado em `gravador/dependencies/firmwares/firmware codigo fonte/MKA-firmware/`.
-A pasta local e seu histórico foram preservados.
+O código-fonte MKA também está publicado diretamente em `firmwares/MKA-firmware/`,
+como arquivos normais, sem dependência de submódulo. Seus 661 arquivos de conteúdo
+foram comparados por SHA-256 e são idênticos à cópia mantida em
+`gravador/dependencies/firmwares/firmware codigo fonte/MKA-firmware/`.
+O histórico Git independente dessa cópia foi preservado fora da pasta publicada.

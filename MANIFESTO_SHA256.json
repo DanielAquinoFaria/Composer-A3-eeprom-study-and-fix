@@ -1,6 +1,6 @@
 {
   "data": "2026-11-16",
-  "edicao": "Publicacao GitHub: Composer A3 eeprom study and fix",
+  "edicao": "Publicacao GitHub com MKA em firmwares/MKA-firmware",
   "algoritmo": "SHA-256",
   "exclusao": "O proprio manifesto, para evitar autorreferencia.",
   "arquivos": [
@@ -11,8 +11,8 @@
     },
     {
       "arquivo": ".gitignore",
-      "bytes": 615,
-      "sha256": "002de1e0ee3e5e7e29e3fa6a6a1f7afa4cc8f222627500b24ae0a95d660bfa6e"
+      "bytes": 437,
+      "sha256": "f5e7f8f6ca1e93e89b846b3be9264fd9475b3d534c9465b9b9ba86aae00cfb6d"
     },
     {
       "arquivo": "docs/CONFIRMACAO_OPERADOR.md",
@@ -21,8 +21,8 @@
     },
     {
       "arquivo": "docs/INVENTARIO.md",
-      "bytes": 5357,
-      "sha256": "13b2b9be9a452a7358866afd6fee191358d3d6154b57463ac315f0a93b851b45"
+      "bytes": 5498,
+      "sha256": "228a86bd591cf3042ec5d3da5616c317daab69e5b001d91860c04bf5ab80a151"
     },
     {
       "arquivo": "docs/PROCEDIMENTO.md",
@@ -36,8 +36,8 @@
     },
     {
       "arquivo": "docs/PUBLICACAO.md",
-      "bytes": 2563,
-      "sha256": "fa2c800f40bf71bfb4128c67976d3be5ec90592302a1389a6d9f0df6b01c4c97"
+      "bytes": 2568,
+      "sha256": "988a9d4072dd9912b79d6c642dd578bb05581600d4d37d7c0df8747328774704"
     },
     {
       "arquivo": "docs/relatorios/EEPROM_Recovery_Report_Composer_A3_EN.pdf",
@@ -4795,9 +4795,3314 @@
       "sha256": "b8bd65240162076d848222586d7ee3449fca7a7c654e4e73ef51462e9dc84568"
     },
     {
+      "arquivo": "firmwares/MKA-firmware/.cproject",
+      "bytes": 89745,
+      "sha256": "696c49d5cfafbc932a4b650f8de46b397033cf64f7b81ef36ee79dbb5e8bd207"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.gitignore",
+      "bytes": 293,
+      "sha256": "0e2da25d909d0700495c5a5c58b5e26d32d96012f4ea20d5208b2576b65b6739"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.project",
+      "bytes": 2249,
+      "sha256": "cb9f626f5eb20846d805832f212cd1b7d4253c6c7916fa8c41f610c37a104a38"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.settings/language.settings.xml",
+      "bytes": 10660,
+      "sha256": "3a0afc22e1981fc78fcae7d171f1dd99b82322ce8e73943c9e47287f30f3e532"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.settings/org.eclipse.cdt.codan.core.prefs",
+      "bytes": 17094,
+      "sha256": "871cb4742af63675a244d7fcf329547131445963a75b2b7e19b0dea9bc585987"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.settings/org.eclipse.cdt.core.prefs",
+      "bytes": 1299721,
+      "sha256": "2907c36e6975329154b63d2caefac483de808760dde4e26a352c8d8c338216df"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.settings/org.eclipse.core.resources.prefs",
+      "bytes": 91,
+      "sha256": "a7e0b4d0b326e6dbd02429dd13aa74ff3398fd563b46f9427ae5e83cb1db805e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.settings/org.eclipse.ltk.core.refactoring.prefs",
+      "bytes": 106,
+      "sha256": "7796567e72315e4be0dd67128447e4a48da08d8c1584822059a12ff48e4d7812"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/.sproject",
+      "bytes": 9629,
+      "sha256": "edfb8cadee8704795f9ecbf90958048aabcd1d01c9cf9ae65ac3f187fa08ac12"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/Boards.h",
+      "bytes": 6605,
+      "sha256": "3fdf13650c90040aa1b8b5abd6e11e13c832fb1d35b4bdbee763d72664172267"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A3_v0.9/Composer A3-0.9.0.gc",
+      "bytes": 3841,
+      "sha256": "b8477fe4e5203ce012c8565bf0cadea591c582cffb52e3861a1f71d2ed62279d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A3_v1.0/Composer A3-1.0.0.gc",
+      "bytes": 3847,
+      "sha256": "2eec6e26db87d9db541a73ebe4895b5ebae86092dac714ffa75d5df9920ba756"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A3_v1.0/Composer A3-1.0.1.gc",
+      "bytes": 3821,
+      "sha256": "dbe30070d321961a735621d22a1a8be310e519aa74489f4a3d95e2ecea70bee7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A3_v1.0/Composer A3-1.0.2.gc",
+      "bytes": 3609,
+      "sha256": "0bc5a9138e6afb30b236a046cf8d8ccc6676f74a20f10778ad37da27834cdb9d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A3_v1.0/Composer A3-1.0.3.gc",
+      "bytes": 3704,
+      "sha256": "007903e81f4d2e05fd1c4b19745b9f2a5412dfef0230c603aa36eea625f5aacd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A3_v1.0/Composer A3-1.0.3nw.gc",
+      "bytes": 3477,
+      "sha256": "d43fb23847c0de4cb9fd9b3cc048020512d5880e73477869ff3667c72b52b01d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_IDT/Composer A4-D.gc",
+      "bytes": 76,
+      "sha256": "ca452b5b13ade4519ccd2254feb4a761a73cb7c772d29cdf1608cb5e31d5378d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_IDT/Composer A4-I.gc",
+      "bytes": 76,
+      "sha256": "ca452b5b13ade4519ccd2254feb4a761a73cb7c772d29cdf1608cb5e31d5378d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_IDT/Composer A4-T.gc",
+      "bytes": 76,
+      "sha256": "ca452b5b13ade4519ccd2254feb4a761a73cb7c772d29cdf1608cb5e31d5378d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.0.gc",
+      "bytes": 3887,
+      "sha256": "ff3400d4a92039c6132592f6c981f2c98db321203f60146c2f1561955c858a1f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.0nw.gc",
+      "bytes": 3407,
+      "sha256": "4bb02ca24b5500658cf7daa26a1e757470172c933b7e8dae1a369da7fabb26ad"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.1.gc",
+      "bytes": 3874,
+      "sha256": "1b6ffe5a79aa0bc822a2f6193af6c6e43ef632f482de9ad96044049fcb83c898"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.2.gc",
+      "bytes": 3919,
+      "sha256": "c873b1f9ae2cd6ee193cdbdb278a7b1dc80f188e30f50cb9f28a8e11f66011f9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.3.gc",
+      "bytes": 3508,
+      "sha256": "9001292c94495c12951140b9b762c74de1efa6cf4ad600177cda89d970e09cfe"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.4.gc",
+      "bytes": 3600,
+      "sha256": "7f6e8de12dc60d96fc3eeca5a2d11171f49179d65ca9e30418d70e7bb91fd1dc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.5.gc",
+      "bytes": 3688,
+      "sha256": "870fb87d47da4c578e6f4c84b229b3ac5bffad3d12ae6af46005eaf75e7af177"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/CFG-COMPOSER_A4_v1.0/Composer A4-1.0.5nw.gc",
+      "bytes": 3373,
+      "sha256": "c9c8c6865e63cfe0fd54b25456bd1fca021b45c07ba42fbbb4fda8abf6ca9f49"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/changelog.txt",
+      "bytes": 6784,
+      "sha256": "edc73fdc1c322cf448857d8a6be69f9399bf9a363fc80cdf6501ee678365ce64"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V09/Configuration_Basic.h",
+      "bytes": 9905,
+      "sha256": "d322eb89e04bdfd40a7a10df1c11a883fc95a4082d1d47e4e3026064c1a30215"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V09/Configuration_Core.h",
+      "bytes": 40283,
+      "sha256": "6910ce002095c64b1e3d0b0c9fdf71b7f45f32b3641c9fb81502f9f9934caad8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V09/Configuration_Feature.h",
+      "bytes": 131837,
+      "sha256": "85053c29947523bc792e0ae30ef032c622fec2c44f948c1b11b690173c000568"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V09/Configuration_Pins.h",
+      "bytes": 8395,
+      "sha256": "1f1f2a772ddc2bf116c9d35f78e7f1f417d34e807ef2b74628c7e021090a6bd4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V09/Configuration_Temperature.h",
+      "bytes": 26848,
+      "sha256": "798a78291e5970d3b68ec218bdd024e2330f8579a830b29e5a5d9f14967a4f38"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10/Configuration_Basic.h",
+      "bytes": 9905,
+      "sha256": "d322eb89e04bdfd40a7a10df1c11a883fc95a4082d1d47e4e3026064c1a30215"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10/Configuration_Core.h",
+      "bytes": 40276,
+      "sha256": "15b33df6ff2485c5ce55bb7d39ded2392faa14a4ba586e99688ae92b670dee10"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10/Configuration_Feature.h",
+      "bytes": 131874,
+      "sha256": "c1437a5470106b51ca27fab92d671132a01f31216415f081dd4673f960817e94"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10/Configuration_Pins.h",
+      "bytes": 8400,
+      "sha256": "ba33e2630c2f3bd33e3bc010a50b631f79602b786bf91eed9348f2f8dc02c4b1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10/Configuration_Temperature.h",
+      "bytes": 26848,
+      "sha256": "798a78291e5970d3b68ec218bdd024e2330f8579a830b29e5a5d9f14967a4f38"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10_TEST/Configuration_Basic.h",
+      "bytes": 9905,
+      "sha256": "d322eb89e04bdfd40a7a10df1c11a883fc95a4082d1d47e4e3026064c1a30215"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10_TEST/Configuration_Core.h",
+      "bytes": 40278,
+      "sha256": "fcddfd10e4d145d500e2c80a5068f5583e68d710e8fcf0d5f12bbfa5355c213b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10_TEST/Configuration_Feature.h",
+      "bytes": 131874,
+      "sha256": "6b1511aa7af59dbb3b67f1570ded82172ac4eb3cc2f7411388285de942bd8748"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10_TEST/Configuration_Pins.h",
+      "bytes": 8400,
+      "sha256": "ba33e2630c2f3bd33e3bc010a50b631f79602b786bf91eed9348f2f8dc02c4b1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A3_V10_TEST/Configuration_Temperature.h",
+      "bytes": 26850,
+      "sha256": "db8591e4d75b0f9db6a17046899023926f5b103500b7e500e416a0fd6f37989c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_D/Configuration_Basic.h",
+      "bytes": 9905,
+      "sha256": "d322eb89e04bdfd40a7a10df1c11a883fc95a4082d1d47e4e3026064c1a30215"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_D/Configuration_Core.h",
+      "bytes": 40275,
+      "sha256": "f6baf840fd3eea00d9f918082f8c935e8d2520271ae6e5d9974038d2ab40b811"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_D/Configuration_Feature.h",
+      "bytes": 131967,
+      "sha256": "bd3ac66dc44782c71cf3ce6919d1976ae1773d874eae2e71f49386d1a03905e0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_D/Configuration_Pins.h",
+      "bytes": 8413,
+      "sha256": "c269f7c7c3f453a6041958f28fe5b8ed6d808917fa8fad130f1c84fc56e0b474"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_D/Configuration_Temperature.h",
+      "bytes": 26847,
+      "sha256": "1fcb223be570dcf5f8dd67886d071a7078162a61b33008e5193267ea7d865aa0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_I/Configuration_Basic.h",
+      "bytes": 9905,
+      "sha256": "d322eb89e04bdfd40a7a10df1c11a883fc95a4082d1d47e4e3026064c1a30215"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_I/Configuration_Core.h",
+      "bytes": 40283,
+      "sha256": "2b66f0905531f28cf4e8c6f1b7dde8b7bc9abd6b291096b0bb8b8fc73d3aad45"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_I/Configuration_Feature.h",
+      "bytes": 131809,
+      "sha256": "a0f745786c8ae045f1811eab0c47b7424349896adb9c9c1fd6ac837e5dd6d24a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_I/Configuration_Pins.h",
+      "bytes": 8404,
+      "sha256": "ff3c3bd80a58eb79011ec441c1b5885e8837dc46e918b723f03e9a89558c3e92"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_I/Configuration_Temperature.h",
+      "bytes": 26844,
+      "sha256": "132940483d5df7df609f1f417065d3c323a025bed63566a92102f0d022a6fb17"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_T/Configuration_Basic.h",
+      "bytes": 9905,
+      "sha256": "d322eb89e04bdfd40a7a10df1c11a883fc95a4082d1d47e4e3026064c1a30215"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_T/Configuration_Core.h",
+      "bytes": 40281,
+      "sha256": "a1d37c21623c4167441b227ae054789841c3320928b4f31b2accd53787fb1b74"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_T/Configuration_Feature.h",
+      "bytes": 131833,
+      "sha256": "256683b2421a32e5de3c1bfb630cdf96089ccafda47fe74c32e0ecb77ab74d4d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_T/Configuration_Pins.h",
+      "bytes": 8404,
+      "sha256": "ff3c3bd80a58eb79011ec441c1b5885e8837dc46e918b723f03e9a89558c3e92"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_T/Configuration_Temperature.h",
+      "bytes": 26844,
+      "sha256": "132940483d5df7df609f1f417065d3c323a025bed63566a92102f0d022a6fb17"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10/Configuration_Basic.h",
+      "bytes": 9903,
+      "sha256": "3bd60a4d923fc319aec1ae62c82e3e2f24d2f7bb0041c79bcbd9e1ce21d913e4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10/Configuration_Core.h",
+      "bytes": 40277,
+      "sha256": "2ece9b5a642b546721d64975d4c73b5f7f116a0239deb316af75cf16b9a02dc5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10/Configuration_Feature.h",
+      "bytes": 131828,
+      "sha256": "ff0a5d4c0c1ec8a45254f28536e9b6e4d80609eae6c1ca7ccf99ad53817599ed"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10/Configuration_Pins.h",
+      "bytes": 8409,
+      "sha256": "ee3414648ee6902a15647871d9c9f02da51b52ff74fc6daa633f90dd89303d4e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10/Configuration_Temperature.h",
+      "bytes": 26848,
+      "sha256": "798a78291e5970d3b68ec218bdd024e2330f8579a830b29e5a5d9f14967a4f38"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10_TEST/Configuration_Basic.h",
+      "bytes": 9905,
+      "sha256": "d322eb89e04bdfd40a7a10df1c11a883fc95a4082d1d47e4e3026064c1a30215"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10_TEST/Configuration_Core.h",
+      "bytes": 40304,
+      "sha256": "1069835994670a43c1b258df9aa60817a5a1c0d34ff5d146cf639068b5bfd708"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10_TEST/Configuration_Feature.h",
+      "bytes": 131783,
+      "sha256": "434b1b07abefd5494e6516678f0f1bde687cf70353966f74bcd3c59be9cbc3bc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10_TEST/Configuration_Pins.h",
+      "bytes": 8409,
+      "sha256": "1d066cdf253149e08f1c08235f7f7241087d3d7e825704b6a0a13b048ec1d1b3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/config/COMPOSER_A4_V10_TEST/Configuration_Temperature.h",
+      "bytes": 26850,
+      "sha256": "43bfc09b52480ccc9eb89bcda58ea6edf152170b820dee0e74b979e597b13950"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/Configuration_Laser.h",
+      "bytes": 4205,
+      "sha256": "61980bc6d3faccabf6a45e4e1f25d0fa2e10cf49173f156bb203acfd4f07977a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/Configuration_Motor_Driver.h",
+      "bytes": 19128,
+      "sha256": "e0c75aced8839601d5f645641d9bec12968eabd0ea1608cde4590559a451dc7d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/Configuration_Version.h",
+      "bytes": 1341,
+      "sha256": "6b11f6a940441668ce9f7a2a925d8f0ba22e6e230ceb024328bb2c703e06484b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/deploy/archive_firmware.ps1",
+      "bytes": 1744,
+      "sha256": "2ea8d1f7afa12a22f23f25e7c2ec4c182c49a244eb22eca6217d23053e322f0f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/deploy/ComposerA3_v0.9.txt",
+      "bytes": 116,
+      "sha256": "afc4e3766f54a628d496d85f8799e38974d1ddbdcb4d15d6245be0928f561ef5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/deploy/ComposerA3_v1.0.x.txt",
+      "bytes": 113,
+      "sha256": "d04668a84abec82278878905fd0fbc973ad026740d7272c6126f0077476b96e0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/deploy/ComposerA3_v1.0.x_TEST.txt",
+      "bytes": 118,
+      "sha256": "14080a04b235ac322ff8963a4c0eb2c6ca9cefba08f989e68dc283b4aae96d54"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/deploy/ComposerA4_v1.0.x.txt",
+      "bytes": 113,
+      "sha256": "2f17832f24cefb95a945d0788115a17edbd3c1e0b2499c61ef1657d244f63691"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/deploy/ComposerA4_v1.0.x_TEST.txt",
+      "bytes": 118,
+      "sha256": "accc98dfab4ddca507aadaf523c95714f189ce29c076de313e55f77be362ee63"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/GCodes.md",
+      "bytes": 10296,
+      "sha256": "2ecacd47ca6eb6308dacdd484c48bc0f2dfa5f9b89ae74f7fe82d0405e91c0a5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/LICENSE",
+      "bytes": 35823,
+      "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/MK4duo.cpp",
+      "bytes": 19946,
+      "sha256": "73e6adb389f13f2ea7110e4986d136a156732b4e1b5b030a261240d96b034fa2"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/MK4duo.h",
+      "bytes": 8022,
+      "sha256": "57e0d795203dfd41413205975440b928cdee62a34b31d89256c7b40ac9e62d1c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/MKA COMPOSER_A4_v1.0.launch",
+      "bytes": 4454,
+      "sha256": "1478cb3d1a6e8cc59c2cf35639ab7ce8cc4dc5462962207436f192e5cdbf921f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/nextion/MKA_35.HMI",
+      "bytes": 2039692,
+      "sha256": "3ee36aeb14f2d06efdc86a472ec105967560a9890fc0527febd59d051e0ba9af"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/nextion/MKA_43.HMI",
+      "bytes": 1945236,
+      "sha256": "99b2643395c5e939609413f0bcf90ad71818134f9eca040176a139d50464a8ef"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/README.md",
+      "bytes": 140,
+      "sha256": "03335c6c57be176ca1dcff45bc98e4c8620d61b3d4539a40ecd75ac07a147a37"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/10.h",
+      "bytes": 5470,
+      "sha256": "deba7c0aaa32b00b940bf22a93b3f49d5299476aa3dd2997dc163491f2df9371"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/100.h",
+      "bytes": 6732,
+      "sha256": "9984ee447d995494c2aa74cdc1fbbb60db59124a9bbb6343755aa099f3ffbeff"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/11.h",
+      "bytes": 5113,
+      "sha256": "80c39f36d64f3015eeed433a935823f66960f04a9e811b9d240b962f3d08cbb6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/12.h",
+      "bytes": 5110,
+      "sha256": "dd2212f8926be7067936abfc31ea1a5fbcfab1081527be6e3360b11b8d9c3130"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/13.h",
+      "bytes": 5057,
+      "sha256": "af07fc97e489c0c4fd834a4a4e5f8ab7ab62977756a7b5fd693f6ca697d081fc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1400.h",
+      "bytes": 6145,
+      "sha256": "6d89ce5862dda78c78893003e1c21e075eefcf7c5a995566f9fbfbf7032677e0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1401.h",
+      "bytes": 6514,
+      "sha256": "af765b71967b896173abdb082f4d907638898bff811dd76c67aa85b4dd49903b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1403.h",
+      "bytes": 5854,
+      "sha256": "6378e69853e95b054ac21a6f8cc859bdd6ed25ac37f766cbe2c23e0bf963c335"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1404.h",
+      "bytes": 5914,
+      "sha256": "8c8bb53061fdec068ca4d60b68a1f41784dc1fee74e6f92bfcb0a98ec53f263f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1407.h",
+      "bytes": 6060,
+      "sha256": "9127d268e3329d3de042020ff45df94c195a1631ef28fa740d7d8e4fcd129caa"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1411.h",
+      "bytes": 9991,
+      "sha256": "49a939b7dcc8b4a9635704cf794195ec5314e4b817db389d3d7809e973da07f7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1412.h",
+      "bytes": 9991,
+      "sha256": "bc260af7cbc06b34b27c600c08de34defa819049fcd05420697540244784c152"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1413.h",
+      "bytes": 9991,
+      "sha256": "f768dfdc23c4dff5ee563b44814ffab89020c214120a5a5dd28ad96643d71373"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1414.h",
+      "bytes": 9991,
+      "sha256": "b5391db99da2af14041ddb190695e3938954db278435e29de4a4695d977af4fe"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1433.h",
+      "bytes": 9728,
+      "sha256": "6decc07caf13652be3f237061fb78757c978747db66a2dee733723091aa89be6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1502.h",
+      "bytes": 6378,
+      "sha256": "b60b88d5f70f56c25e0a82de7a721e886ba2d9a6c7088820eab69866d6c238f8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1503.h",
+      "bytes": 7131,
+      "sha256": "f3c4924676acbc9dbf473d39ceac3e4a3db2e38a7c299264c3b7c62dabc79dc6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1550.h",
+      "bytes": 6612,
+      "sha256": "339dedd7db2700348e115fb10214745b5e9039d8f0853bb01259e439df4890ed"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1590.h",
+      "bytes": 6370,
+      "sha256": "3f2dcb826d1f9dc8929983ac5204babe530a555758fde03b91e823ba33b471a1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/1705.h",
+      "bytes": 5521,
+      "sha256": "c06f0b9b789f6968b3311c37dad588a1404a2516338a8acc2875f4b58cc58df2"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/2.h",
+      "bytes": 5310,
+      "sha256": "08860114bc4cef5db93b6e2c9ee7739454de169da3939d08df4b8ea4fe59edc5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/20.h",
+      "bytes": 5305,
+      "sha256": "383088c1de9ef2567cf5cd9c1b9d605c32e19459b7032dc2a73068ec3fa1d2c4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/21.h",
+      "bytes": 7214,
+      "sha256": "97713c7b62636088d4e7434ff1fdc3d9836521dd01559ba0ad4452e92c32443d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/22.h",
+      "bytes": 5001,
+      "sha256": "bbd1fa5a8d66011bba9e3cf77628b356a652c0c5dcff3f8cd0359d424322c34a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/243.h",
+      "bytes": 11269,
+      "sha256": "77e6c5c49a6d404db959d669c5cfbc7e374db39bf15c40844396b7bf23c91666"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/3.h",
+      "bytes": 5490,
+      "sha256": "a5daf3481af616ade8123bf80716d17976209750bbd5535aa71ea5f1b91feb8b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/301.h",
+      "bytes": 6889,
+      "sha256": "cb686267315f76124da15b31131d4c0cfe12a3912ada7c0f7071764fdec5adce"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/302.h",
+      "bytes": 6312,
+      "sha256": "392128aa3fe40f0716992ba62cd5279f504fcd37d84e6ae479181633300ebf99"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/303.h",
+      "bytes": 6446,
+      "sha256": "e997b3cbc03a22401d4a62fd794eb5ae96b4d4247b35f59460048ad12f2d5f21"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/316.h",
+      "bytes": 4969,
+      "sha256": "7ad614ff6ce9c1ab511f4043ceafac1355c0650722ef8cb0cccc2dda1c850996"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/33.h",
+      "bytes": 11290,
+      "sha256": "57877f97ca2c8c3460f71e93b4cbff8c1a09eb9e208211d68deaac9ab4d89604"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/34.h",
+      "bytes": 11294,
+      "sha256": "5731f8c130ce251947fb9bceb7f48bf795776ad6a98dbbcb9ce12c62f30c4622"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/35.h",
+      "bytes": 11290,
+      "sha256": "158a9d45e6fe520352f04fb681023d1f2fa95c04f1196274f7fc4763efbeb940"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/36.h",
+      "bytes": 11297,
+      "sha256": "cc1b4c293c993d51976a50790aadde625fb60586e1941953c4e95212b68491b0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/37.h",
+      "bytes": 11298,
+      "sha256": "cacc4a3819c76fadadd20d17e20fc8e0be72f0416719452b049194db509dab93"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/39.h",
+      "bytes": 8825,
+      "sha256": "c439971cf61d5054663c5df8a6c5c4ee7de739454e23558e1dfac6b6c9e21688"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/40.h",
+      "bytes": 8381,
+      "sha256": "2675f3a2e63ed795d62f9a73f6b56fc9164442a20f3d5cee02cab77d865e22e8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/41.h",
+      "bytes": 10332,
+      "sha256": "a7edb17184d1cef1d1c3fd7202ad51a47479c3bb730d476e7053d62b3be6f856"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/431.h",
+      "bytes": 11175,
+      "sha256": "ecff44f43cf900e4c38d5bc478487383b9f7466e87155961ba116fa81e7780a9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/47.h",
+      "bytes": 12706,
+      "sha256": "ec682188147b335ec30ea3268d3306436129de4713a1f1ba9f1ccd4f72448710"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/49.h",
+      "bytes": 10454,
+      "sha256": "a86b580c7b5bc022b0b2afb0906d65c89c79827be91af0f4f701254beadd8aae"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/5.h",
+      "bytes": 5262,
+      "sha256": "cbcc8a38068b46c60103d576ad179b11bb8fe256962a6396d320fa2fa974d4a6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/53.h",
+      "bytes": 11240,
+      "sha256": "3920e40431ca9a8d9f92ea196e26b99b0778c2c41aafe3e42cd3ba2a985f3d8d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/6.h",
+      "bytes": 8178,
+      "sha256": "21ef4736b69192f20dafcd48eab685b82130f07884dcc9520f517f36caf81356"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/62.h",
+      "bytes": 8491,
+      "sha256": "e7fc04c4ddc9097d4db344772e7fb3b769afb23f0eeb3ed5b7189d21982ddc35"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/63.h",
+      "bytes": 8456,
+      "sha256": "15adbaba466c4cbdf0b068f66552dcd609a2e76784dd151ea6539e0e620af3c7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/64.h",
+      "bytes": 8499,
+      "sha256": "31e210179610753ab8241ea470c9ec0be34cae8e8743215701fad439c787edf1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/65.h",
+      "bytes": 8502,
+      "sha256": "39007006b94063b8b1394fd0c1e27f77a0203ab680163e8df706127147c9a82a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/67.h",
+      "bytes": 8601,
+      "sha256": "d63b4dfdd0428ce3672d85b3acb790f6cbf4b9b4bd09c754350f8efdab8f258b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/68.h",
+      "bytes": 8086,
+      "sha256": "94f18f6187f78f222b842de11ce264ecafd242454e07efdb3508aa4234a4a564"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/7.h",
+      "bytes": 5994,
+      "sha256": "e9afdffe710a662e10a5b6ee385f8108669d5153d325e2c9ffcbab572bcc8b13"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/70.h",
+      "bytes": 5768,
+      "sha256": "2bf2e157b34cba419031985ec6ba9aa08b378f548e995184ada282abbd9aafa2"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/701.h",
+      "bytes": 6327,
+      "sha256": "703f6387d980d14a9f3e6391ef9cf5e97e6e3e92bcf23584de12adb2bc35b38b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/702.h",
+      "bytes": 5468,
+      "sha256": "477902a82511e6e42d6425588df57c75d9c4637b253267022fa71a1fa975d45f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/703.h",
+      "bytes": 6204,
+      "sha256": "fee480835a40441044914541dd5645e60438679c9fcab96ba4d3cdf438df4bf5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/71.h",
+      "bytes": 5195,
+      "sha256": "0e0440561d8cb64d1330138a4fe5d0724acea7aa57206fdc415486c3068c429a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/72.h",
+      "bytes": 5817,
+      "sha256": "e5b169a3cd4e02f6c3fb8e7f66b19eb689c132929886465eeee2464ce389580e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/74.h",
+      "bytes": 6243,
+      "sha256": "1b82f789a60420978d1500bd63b0e1d15bc9a67857bcb4ae8cac2acf8e15f57f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/75.h",
+      "bytes": 6296,
+      "sha256": "9813592f0fef7411a397b79330d6ec8ccc4c41f1983e1c98aa60a4c813fb573c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/77.h",
+      "bytes": 5691,
+      "sha256": "422464bf7a95eaea032770cd62edb6f331748105763dccd609b6f33dbb145d13"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/78.h",
+      "bytes": 5682,
+      "sha256": "e41937c72f97114ac9f831667685d76e0edaeca06d9b90a07599b0a96b1c3966"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/79.h",
+      "bytes": 5513,
+      "sha256": "77a777fb6bcec7947d2cf0cb443e13fe828aa4c4084771e4b3a98f0f1246996f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/8.h",
+      "bytes": 6064,
+      "sha256": "7bd366f62c3edf4979bc76d98fedc68cf4ee8b2001d93fa781c87753959ecc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/80.h",
+      "bytes": 5228,
+      "sha256": "21d2bbd1687791458ef215b74d139de3306518dd31a3fe0850512fe776df546b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/89.h",
+      "bytes": 5560,
+      "sha256": "624e9ade3a3541678b5a43b6c2696e7bbae8d54ebce30625135d59e0b40c30bb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/9.h",
+      "bytes": 5016,
+      "sha256": "87c29eabc7c771932033ce9f22dbb0dc2d4a0ce76d8ce0ea680bd325644fc309"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/90.h",
+      "bytes": 6281,
+      "sha256": "73194212de080248103bfa07578ad52086895eb692732d84020c47a8eec50fa0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/91.h",
+      "bytes": 6356,
+      "sha256": "c7a4636eb01f08c50c40de6acb5ae037859918bd4721b08f5c4ae1ed2096f6a3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/99.h",
+      "bytes": 4896,
+      "sha256": "6a5454424f733cc4c146f1bd5d3b991df3fbba1956f50fdef7abf6b158804d95"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/boards/999.h",
+      "bytes": 5003,
+      "sha256": "05f084fa38b72617e3d54f75f75497efbef698424c0c6436f4efb3e0e4b199ca"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/commands.cpp",
+      "bytes": 121453,
+      "sha256": "5c4ae793640708f9e2f068047786b6093d7fac94b4ee31098d6853e7bbb89ffb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/commands.h",
+      "bytes": 9683,
+      "sha256": "dcdbc9559e6a9d031390e6fd8a0ccee737d8f5dafa0c243711e077cc6fc503a9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/abl/g29.h",
+      "bytes": 32149,
+      "sha256": "c75b13b95b4745cc1c7ee497f17ae9ab83a85262ae375c937383d74a0e553b87"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/abl/m421.h",
+      "bytes": 2154,
+      "sha256": "0c683d663e843b9640c876e607632d493bffd814c5b08fe52da67e860419c482"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/g26.h",
+      "bytes": 33159,
+      "sha256": "478fcb240e053e030606eb5d05a95afdca9e6edc6677fb5334f872f5342cce91"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/g42.h",
+      "bytes": 2310,
+      "sha256": "a2db3b49238ebdb5e1d50941b857b4e2bcdb8423af2f744c3d14053535538fb8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/m420.h",
+      "bytes": 6714,
+      "sha256": "9254c3f159a235def414a878adc7a3132c12eab658e698106fdc11de2addb87a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/m49.h",
+      "bytes": 1236,
+      "sha256": "fa7b0f28f2bf75af8f391ee821c6639c951165c01dce8d9372198ad0c463c91a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/mbl/g29.h",
+      "bytes": 6453,
+      "sha256": "a21ca5974621b53f7a17dc6fd0293cc23bef8e5cb72b01939d6103c29bc15426"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/mbl/m421.h",
+      "bytes": 2132,
+      "sha256": "0f465f619134f182a856364a9a58ad158bddc8c0933a810d9f999a18b78f6201"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/ubl/g29.h",
+      "bytes": 1096,
+      "sha256": "dc88147098708f1b6f1bfb4317649a7cee104b61349303b69af0cddd6ba15e96"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/bedlevel/ubl/m421.h",
+      "bytes": 2314,
+      "sha256": "7719980393312fdfb1c60d6bd1a346b50861f797f934e3e00d69f596529f0f86"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/calibrate/g28.h",
+      "bytes": 1499,
+      "sha256": "6745505e5e4aa7c89a423b344025153ac8679b319145f1d5f590a011770ef59d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/calibrate/m48.h",
+      "bytes": 9692,
+      "sha256": "29eef36fbe492aabd638938918147581a6246946d2ca0b97d677ab5d18641c22"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/calibrate/m666.h",
+      "bytes": 1965,
+      "sha256": "d49ad9b664662519967ac26fdb4e488e516c22f1bb4d3d6c3f2ab72b04c8418f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m1001_m1002.h",
+      "bytes": 1437,
+      "sha256": "3b525a091c9df70ec60991a25d907a5383b74b62b80956394535c11c405cda3f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m1003_m1009.h",
+      "bytes": 2168,
+      "sha256": "8a2f93096efe2b040adbc2a6db767266b4eafd234d5d2af487c544603c43955e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m1010_m1011.h",
+      "bytes": 1401,
+      "sha256": "6641fb0d56c1af78e212a4ad23a64c042a165bd0b16f3cce50addf7dc62033af"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m1012.h",
+      "bytes": 1748,
+      "sha256": "d91eb5405596a134e5e982083fb313674234872ea7db29cc38f1c9ed67be0574"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m1013.h",
+      "bytes": 1252,
+      "sha256": "dbe6954bf711e2a399e6d263305826a11b041e1c8e301852d61497af4e8785dc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m1014_m1019.h",
+      "bytes": 3047,
+      "sha256": "b1b58cafdb00ecddc127f9224b5429c574aaa15fa4e7943443dfea0d4260fe69"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m217.h",
+      "bytes": 2021,
+      "sha256": "c909edfcb610c689beb214fba9c739e227e5daeda29cfeb075695581df303d17"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m704.h",
+      "bytes": 2416,
+      "sha256": "1404028380f0774e66f303c4b422a33f25cb5289384af4d6d85fdda9281c3fb6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/composer/m990.h",
+      "bytes": 1151,
+      "sha256": "6838cae86cc2142b18c4d00e22bc5bf036007e19953a8bf0306a45920cd2b15a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m123_m124.h",
+      "bytes": 6176,
+      "sha256": "31d60c723202652fad7327a420fc4c73020ceea444c720279e1e813847903718"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m200.h",
+      "bytes": 1874,
+      "sha256": "61992f9a7fae206848022399a04579686b67a9946e422cfb890d05e4af33c150"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m201.h",
+      "bytes": 1730,
+      "sha256": "a8b48e8d500ab6bc08acde5e468350ad6c40e23d2dc5bb8978e217168038f122"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m203.h",
+      "bytes": 1623,
+      "sha256": "c97c6f2f1be8973e2f285c0d5eca6eb7e9127a57d4945156469c48c117f4b2cd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m204.h",
+      "bytes": 2498,
+      "sha256": "d877acbf79a47990e151d04e19fd9088282caa99b6773b0d1a6d16ac72193e1e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m205.h",
+      "bytes": 2017,
+      "sha256": "f81a5227ba20519711bf97f74dc64aeafbf1bc7459ba3aed7cd7c4c2da3044f3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m207_m209.h",
+      "bytes": 2876,
+      "sha256": "a93439bf3bce4677b96dc59422c4a1aa017371f51480374909fdee5de69068fd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m218.h",
+      "bytes": 1760,
+      "sha256": "0de50afc85308a79a1f8126099071a9e7bd700f27f533187d30bdb19bb60b4f9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m220.h",
+      "bytes": 1169,
+      "sha256": "9f2307e3b23d5ea745bdb9c3d88f81f7e9ed5561c639e7ae4da7d3aecadace24"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m221.h",
+      "bytes": 1490,
+      "sha256": "9895a2ad8b4e4ffbfe61d399a3cacbd2861169aa83925b827844b657a1747ffe"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m222.h",
+      "bytes": 1424,
+      "sha256": "9426de17479d895a3a9a86e50af1def9beb40ad979a04313fd2dcf91f3d19d45"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m301.h",
+      "bytes": 2119,
+      "sha256": "ba0abbec707d7b959567ce87e07e3044011e4515cb8afe4297ba26217f76cf62"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m302.h",
+      "bytes": 2343,
+      "sha256": "ff8af3141d023dd828c5c70d60ff7cba45da3872365282d84b3a2e5c1615e251"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m305.h",
+      "bytes": 3144,
+      "sha256": "08c976984a440ca4a81e55967cc6726d7743acc3aedda60dcdd88fd678b956db"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m306.h",
+      "bytes": 2293,
+      "sha256": "415b0b152559fdc1890b1504dac265c902a60b0e43095d56d16197ac74c974c3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m569.h",
+      "bytes": 1477,
+      "sha256": "e1a1ea77a86e520ecae3c15763803fcd521b7df8ad5756cf18f18bd175f757ae"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m595.h",
+      "bytes": 1654,
+      "sha256": "26fc8a856fb6a12667bde2cee570351859fe264f46b05adfbd35f65e4cd2d53b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m900.h",
+      "bytes": 1529,
+      "sha256": "7f06ee349a1c7cd38d9037c83796b3a569c74962658447d8968577ea7d87ca9e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m906.h",
+      "bytes": 4589,
+      "sha256": "d70edcfbf26403e92479bf2f66cd333ad4c6fa2db73f097b1bfc5a3f486c8541"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m907.h",
+      "bytes": 2264,
+      "sha256": "3c875ea1d07d6a9173a92b84427423b46d574df06119f3639921fa3b70618bb1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m908.h",
+      "bytes": 1242,
+      "sha256": "a8d531db0b639f5a0b1a56599de76b7af4aa323cca7d523b31c4d9c09e244dc0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/config/m92.h",
+      "bytes": 1963,
+      "sha256": "4d27d174eca869b1d7e476a730be98a2e9fe0b8d43a3854635192f41fb94cafa"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m106_m107.h",
+      "bytes": 3628,
+      "sha256": "913d8b7338b538258e3dda3429c177e0cd007044fea9c08f79fb212a628e9f74"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m112.h",
+      "bytes": 1133,
+      "sha256": "8d77360c38cb84f80ada9b2f2243e06bc80fa72924388525293f840b8253ed2e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m120.h",
+      "bytes": 1122,
+      "sha256": "1ec4d10a918a34817dbc5b750cdc48331c2f8bd7caaaae8189c704981817cecb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m121.h",
+      "bytes": 1125,
+      "sha256": "4909efa3bf1be4c81619dc293320d048ee9aec760cc770044d08f04e0f61bd2b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m122.h",
+      "bytes": 2085,
+      "sha256": "65ca61a7d7b8dc6a78219158d81feef36380f6c3d04a04242515f162b323eb2e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m17.h",
+      "bytes": 1131,
+      "sha256": "b7303038ce3b0a4e0c997cbdbf10c976e829799711e8276daf36f77623dca9ff"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m18_m84.h",
+      "bytes": 1881,
+      "sha256": "96e03cbab33870f2a3b4b053b47ca43023528c26f44989993efe1e6d8b961ce5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m226.h",
+      "bytes": 1874,
+      "sha256": "7316623015e15fc8ff29b6a14aef4fa90a1889564a9bc100d9c0eaf4e4bbce50"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m280.h",
+      "bytes": 2552,
+      "sha256": "ca7e404e9c1cc2b198d2c78ae7042848aef8234046ff901872dadfa50c453e7f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m350_m351.h",
+      "bytes": 2240,
+      "sha256": "ad4fb79361710040b5e1b564f143b07e69274c05302c219455aa51e99072cf79"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m355.h",
+      "bytes": 1808,
+      "sha256": "072c1d2c3a312ef30ef9a7dd9801bd195e3efe678d2c481c19cbf57f0f635549"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m380_m381.h",
+      "bytes": 1327,
+      "sha256": "4197380484304ba6405fa843ddea13fbd386fb68b9d505ef292b0689a966bfcd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m400.h",
+      "bytes": 1072,
+      "sha256": "a820b0655168b2deba92511607c3225c3b8e2b6e418cf57e584b05100b3cdaf1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m410.h",
+      "bytes": 1286,
+      "sha256": "8495d9732682dbc108235e836098588b24361a4657cee16dd09f30abaae387e8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m42.h",
+      "bytes": 1547,
+      "sha256": "fc7c53aeb495c352fbde9d295920c2866578650bed2fae27cb0b9fb796201182"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m540.h",
+      "bytes": 1272,
+      "sha256": "f30e32308926cfc1539d6f06bc23fe6cd4c3a8008cdcf981f2f1cef9e8c03bbb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m605.h",
+      "bytes": 2994,
+      "sha256": "411261b96448ceb204681757ff892eb51f568dfc791f48b4418021630e537a91"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m85.h",
+      "bytes": 1313,
+      "sha256": "db129492d0908158400ee7eb6aa6083d82e3e5037e0844e4eea2e2315c36bdec"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/control/m999.h",
+      "bytes": 1476,
+      "sha256": "6cdbe93a533db615d0b4f8ed171b685c436d1fb5143fdb1aa45127b1628b7ed9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/debug/m43.h",
+      "bytes": 10760,
+      "sha256": "5a7063bd6a69e0707d69be4c9e5d9af27a689525088d58f02e28295eb32298f5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/debug/m44_post_table.h",
+      "bytes": 2176,
+      "sha256": "bb08c1b4e66d2a985804c9e4a8ebecc04db56e0dc0e1b5ac02cbff4fff3cdef3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/debug/m44_pre_table.h",
+      "bytes": 1286,
+      "sha256": "9890ba59c09a2261ef4a879d2598e1e6ba6389093478924778d42304de789a6a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/delta/g33_type1.h",
+      "bytes": 12495,
+      "sha256": "df3d16b7e786f9cf36c9f630fb76f3f676ebcd287555045f518195000a02fbbb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/delta/g33_type2.h",
+      "bytes": 26279,
+      "sha256": "d922b3caa0ec7b797ca4994764ecfd267b8fcc68b118960923aacfb5b8d387a9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/delta/m666.h",
+      "bytes": 5281,
+      "sha256": "3cbc1d7ed8738b0506f620744753234df1b066f1b81a95da8c5368c171598941"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/eeprom/m500_m503.h",
+      "bytes": 2152,
+      "sha256": "883c126c5b86a9ff83f71a58fa5500e940e51ddf15134617a2f5328f80937e02"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/g12.h",
+      "bytes": 1642,
+      "sha256": "0b1522122d345094dfe55e4adc919d6b4c5908b0a6d6ab04dcbdd3052a188325"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/g27.h",
+      "bytes": 1699,
+      "sha256": "d9c7e9026f238a62e38cfe1b098b156a238804c2c5d6e336429a64f335455715"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/g60.h",
+      "bytes": 2214,
+      "sha256": "82bba75438d41222e2d891e28834e4ad833d9832c8355e06dbb15ad5f0ff11be"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/g61.h",
+      "bytes": 2122,
+      "sha256": "df2da06fcb2929bc7ad3e74b593c35c2d06bcf269f27b565bc163f5257dee3c7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m100.h",
+      "bytes": 11913,
+      "sha256": "db163434d5bf5866f42e8b7a69d2728951820c839cf839aad66a4bab223308ed"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m125.h",
+      "bytes": 3601,
+      "sha256": "1381638927f216f9a9bacea489461ff8a9ec1d2ba1c49508e5621965d1dc1912"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m126_m129.h",
+      "bytes": 1736,
+      "sha256": "2ef3e3b140fa37ccc67131e101610e1826f41514dda603932310108e1187c27a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m150.h",
+      "bytes": 2648,
+      "sha256": "63cb969392792da414baa0e3c0604516a450c8dcc16c29d5c36b004a5273d524"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m240.h",
+      "bytes": 1895,
+      "sha256": "422b6c3af593c84983ae2737db138d34f266af255af6cfc1d7c1e29f1735be13"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m600.h",
+      "bytes": 4709,
+      "sha256": "a6ec95ba37b0684e8844228e6dbefab2363b6ed39f1c8a34733f209759baa5d5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m603.h",
+      "bytes": 2048,
+      "sha256": "1f4a727e5d333c086ebcc1d7c09d79f66909257c7502601c3526604807bf30d3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m701_m702.h",
+      "bytes": 5950,
+      "sha256": "526e581767f44e08135c21645ceb4b22d73f1455020547f9ae10e36489330a57"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m911_m915.h",
+      "bytes": 11870,
+      "sha256": "927dc75f6a5ac73d0dbee1a0be33af6a224bb5ab8d057db573ec2b8c88315924"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m922.h",
+      "bytes": 1181,
+      "sha256": "f562121238040c0c585a230dfe43165f139ef7756dcf4b1752b1231cca1e1317"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m96_m97.h",
+      "bytes": 1933,
+      "sha256": "9fb0a747d50a182e819aed753ea535a7a364ddf443f465624add0509385605dc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/feature/m98_m99.h",
+      "bytes": 1381,
+      "sha256": "f5448813fafb523c670cd88dd8a98cef73176c53ea041e5015a1eaf9ec00a259"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/gcode.h",
+      "bytes": 8937,
+      "sha256": "93f552ddbf660901b2b2058f4a87876e5277bd1614ceb55a6118855800878cd8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/geometry/g17_g19.h",
+      "bytes": 1901,
+      "sha256": "1f0326fd378d7a407303ba3e3343387617a321553af09bb4a33976184ae250d4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/geometry/g92.h",
+      "bytes": 2593,
+      "sha256": "3340bc5d8fb4ad6e398e19e8efdbba6faac9e82564d1d2a6879e8b70093df2d4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/geometry/m206.h",
+      "bytes": 1799,
+      "sha256": "0d072715a9ccec85035e78b1222f1966f6e748c1b7cac808f279b27c9072ac6b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/geometry/m428.h",
+      "bytes": 2265,
+      "sha256": "ad764113d4b7d0991db91f50e67fd3c90a025e2c4b6627c3ae9dd58bd54ca8c5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m110.h",
+      "bytes": 1338,
+      "sha256": "041b6a609a1a4dee7453d0c8932b82a166e2d2a8adfedc8eee8bb335b4e941ad"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m111.h",
+      "bytes": 1318,
+      "sha256": "91a8f71f523d671b5714350eaab4e924f2de13720c18260b31b92823b7b31b57"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m113.h",
+      "bytes": 1419,
+      "sha256": "a747babeeee7b8132d3499369542347944966babf94464108aaa16e418aade57"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m114.h",
+      "bytes": 1284,
+      "sha256": "0664693ba2f3e779e3fd3995ea62cd0af8d2fc88255823699c51029648882d28"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m115.h",
+      "bytes": 2550,
+      "sha256": "7ff1b2b8a91c00c4aa39d7a4efb27f5f9a2fa44c909e04d0834a7cd68e576252"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m118.h",
+      "bytes": 1349,
+      "sha256": "3e978e29b94f75803bbe940a15bf68132af1c86fbb14e37458054fc01975e8c6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m119.h",
+      "bytes": 3431,
+      "sha256": "afc55e514590623c5a3cbc5af769f8d10760f5a2c63fbf6454927e07097a8ac7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m408.h",
+      "bytes": 1599,
+      "sha256": "c32ee3af7ca97729f30499b79c4aed8258cdc9df00f5d5a81a6b6f25724e5f98"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m530.h",
+      "bytes": 3012,
+      "sha256": "13c84216752b13d0688f794d9d8884ed103fc72558fe28c44483e43390c1677b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m531.h",
+      "bytes": 1158,
+      "sha256": "136ed7adee643935bb44e1070d20ecba33ef44a8a58e09a27f6859a4bcdd7a48"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/host/m532.h",
+      "bytes": 1314,
+      "sha256": "2fda3ffe15524aa72f0d0de19e1acf24b58c71e3b3cd6eca34523c1538d29366"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/lcd/m0_m1.h",
+      "bytes": 2614,
+      "sha256": "34d751634b905ea1b5544762eb1ef3fc50b0b0f2ea31beb917c9f31266b3a1d3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/lcd/m117.h",
+      "bytes": 1289,
+      "sha256": "7eea0efdd8d9e96c2b55b143510d2e0b3889fc35bf11f0bfc0fc151693524f9c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/lcd/m145.h",
+      "bytes": 2643,
+      "sha256": "bbb28a1cdc3650cec40c89572f491378f040f60606cdeb1b81a795883efc5b38"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/lcd/m250.h",
+      "bytes": 1544,
+      "sha256": "6dfe3035b92f28e9e7fdb735971eb59e3c04ff16f6998d894d5cca87d28fe0ad"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/lcd/m300.h",
+      "bytes": 1402,
+      "sha256": "31537c91c31da537279076779dd7760470ad9e8feaba4796e8f878c9b6b6b178"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/mixing/m163_m165.h",
+      "bytes": 2604,
+      "sha256": "4534ca889ef0d28d6720b98c1e7c959ac8b75abc2206e8c13f51debb12daff59"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/g0_g1.h",
+      "bytes": 3242,
+      "sha256": "1c665c4efbd1196f4548f3767a8185940a5a74633a54994f48ce70758f17377d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/g10_g11.h",
+      "bytes": 1465,
+      "sha256": "8cc0bfb6486b11d20bb41c88feb0496046c3106a5ff9419a4c5354fdbbe0a52d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/g2_g3.h",
+      "bytes": 5316,
+      "sha256": "1bf31f3674685dcf5a00aa01cbc42167d8547502f25c538c4b26544ace1bc295"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/g4.h",
+      "bytes": 1499,
+      "sha256": "009bd196f04eedd5fe9a4dec8077ef7ea5ba105b3b917a8740561ab9a75d6016"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/g5.h",
+      "bytes": 1636,
+      "sha256": "0f379e13a0b74e4e3263509943152eb24a7fb4d206f326eb0caf5c74e48f668d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/g90.h",
+      "bytes": 1077,
+      "sha256": "4be383a0c95d7b55ca57cd3349b6c518337f3bedbe8db06e008dc509d2ab8950"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/g91.h",
+      "bytes": 1076,
+      "sha256": "dccb3e5894acc717a11f0a9a8caaa902f77c71e711d197715a9f1f93f268ea0d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/motion/m290.h",
+      "bytes": 2154,
+      "sha256": "aa72b7e42d5eae8f505f77198381fe5010d4dbe9cca3b21ef4d8dbf8ef27b0df"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/multimode/g7.h",
+      "bytes": 4900,
+      "sha256": "c0a70f817cdb1ce0a69decc1e78cf548181e5e2520e2738014faf7490cd6bbb8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/multimode/m3_m4.h",
+      "bytes": 2616,
+      "sha256": "b1a3a427cfd0bab14310aa95c51eba77f7f37a158187828480835b8f0a45e0ca"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/multimode/m450_m453.h",
+      "bytes": 2508,
+      "sha256": "42ad08fe27baebdf71e86b14b067580ae24dd5fe16604236f78657b8c92b3e4e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/multimode/m5.h",
+      "bytes": 1789,
+      "sha256": "9ef66e566b516a89c2a4c88cfb3716dea5ea6e01a179fe64719c7d829436795d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/multimode/m6.h",
+      "bytes": 1140,
+      "sha256": "f36e2f84dde7a7f0aa27d6f36b2e9899b90f3896b140286b8332deecfe158b04"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/multimode/m649.h",
+      "bytes": 2044,
+      "sha256": "27d1654bc7241fa01eb4704021f1367a3b494d469f7fbe56b3af19a02d653cdc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/muve3d/m650_m655.h",
+      "bytes": 7728,
+      "sha256": "79e6fff811f2db77fc0de7e70fbd38e512e0d7f44c3e05245696c62c99a33605"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/nextion/m35.h",
+      "bytes": 1985,
+      "sha256": "c8d326515dce3f6a89918ddbf8dd28dc30a41440a556324d5fd4d53209a1a0d2"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/nextion/m995_m996.h",
+      "bytes": 1393,
+      "sha256": "c0d5b8ef1849e94b9a79739b0a51bdf78718c8852614c072c03b763b78cafea6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/power/m80.h",
+      "bytes": 1894,
+      "sha256": "4e964a173c063b744d595c7b7cf2f35e029ccec7bb630665ee4a710db6c4878a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/power/m81.h",
+      "bytes": 2044,
+      "sha256": "760a63f7f130ed3bbd3df08111fa5696ddbdc1dcc4d3c655cd63fef800dbd9d8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/probe/g30.h",
+      "bytes": 2979,
+      "sha256": "52af870276af7a7521ec1d6e33d7f4249cc4d44c73032478e6fb26d71d82bcab"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/probe/g31_g32.h",
+      "bytes": 1244,
+      "sha256": "65baa83b84caa28ac98e19e0a8ed145e949959ad39f7c04bb574f2061b4ea46c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/probe/g38.h",
+      "bytes": 3791,
+      "sha256": "d21552f7cebc2ebc9adbbf2db2da282f68c1832400f2cf2a7871007e44816b7c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/probe/m401_m402.h",
+      "bytes": 1368,
+      "sha256": "72bd6752ac723f2d863a239546eb497d276e019f6cac12b8827c5dd769ada91e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/probe/m851.h",
+      "bytes": 1725,
+      "sha256": "ce8890c27f39664eb702ffc8360d08be5f93315626e287a551694e39f765a8f0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/rfid/m522.h",
+      "bytes": 1996,
+      "sha256": "7846d229a105179e1c443d4eff312f49104ef228881608f4dd6db8a844d20cc8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/scara/m360_m364.h",
+      "bytes": 2259,
+      "sha256": "61b45e48d6a82ec953a48a9afb80aaeccd518bac224f31fa3f35dddde9035745"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/scara/m665.h",
+      "bytes": 2318,
+      "sha256": "769948612316df42ae27d8e34ae482cd6e60a1e2980d668d73003e1a4d96920b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/sdcard/m39.h",
+      "bytes": 2121,
+      "sha256": "c179b3641febdce6980e5551495be3bfcfdc5a3f661c3e202ebf4a83983de299"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/sdcard/sdcard.h",
+      "bytes": 7962,
+      "sha256": "ec4c4495c5fe670c4ee0e22d58b3636315b276a84f889928d91ec2d06224f454"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/sensor/m404_m407.h",
+      "bytes": 2779,
+      "sha256": "cc9fb7df8d847dd390a8a75d9b1ff2192b626a54486da9c44aa814e337ba3bb7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/sensor/m512.h",
+      "bytes": 1728,
+      "sha256": "6f62695a128c30d3216f492395cc040b663dd555f60c596298b9441ac91138a8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/sensor/m602_m604.h",
+      "bytes": 1520,
+      "sha256": "af3c314956d12d73fb3dd74e9096549c6f0042a7ae3b651e319b0db4e28dd8a9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/sensor/m70.h",
+      "bytes": 2206,
+      "sha256": "1f168922c2746ee1272a4cb075f79467bef9db512b14a7f3540d9e2be445b46e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/stats/m31.h",
+      "bytes": 1262,
+      "sha256": "68591c6af20f4d30e78a95ef3f33e7b6157521053e0e52dbd8c0a45fde69525e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/stats/m75.h",
+      "bytes": 1074,
+      "sha256": "b138f44b3ba9c422fb0307634c2336b24ea5a8848974f36180695da34560be13"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/stats/m76.h",
+      "bytes": 1074,
+      "sha256": "c1d6626705979a4fdeefc83635826f626c20c3b5873ccb8837f2dd31ef6261c9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/stats/m77.h",
+      "bytes": 1072,
+      "sha256": "e89187d1c0d204c830a3e7d402380d98ed16e3501477387097801d51202711f4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/stats/m78.h",
+      "bytes": 1222,
+      "sha256": "a3cd35e0eb57b93b8f04c93f4035405064fea215ef398c2779f716bfadbc038a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/table_gcode.h",
+      "bytes": 6679,
+      "sha256": "4d8d4b5a09ef6cb5d1e691c78e7d6daf2c0443b4030a707e608ecb866735bb17"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/table_mcode.h",
+      "bytes": 57985,
+      "sha256": "f9732086b07ad0ed0ce3110cf18f6752cffdd32ac95a39a357801806f0b34039"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m104.h",
+      "bytes": 2137,
+      "sha256": "8045db2401a0ceda849ce56f6f30fd270697a8cf2d9986d14daab1522cc80888"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m105.h",
+      "bytes": 1539,
+      "sha256": "7d0bbd5707e67c30a86d202fd0ea70a1f9c19d8a2e51f40ce8e241ee2c252d28"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m108.h",
+      "bytes": 1231,
+      "sha256": "4da11103534b7c71fc7594e7914bb7e389b1a02e68983392e2e1596ea3de0446"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m109.h",
+      "bytes": 2733,
+      "sha256": "aed53d9125215d4e5e5e5856d9c9cb396adb48b89935f4ea9c21990d4ca2f007"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m140.h",
+      "bytes": 1248,
+      "sha256": "7531817b0be1b0d151ddc615d518b1e88cbd62b7d60efba70c2405ecbb1cab6e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m141.h",
+      "bytes": 1260,
+      "sha256": "c3f2174b628304a90642ffd7485a53aa7af3ce24d92e7d4d774d848d5b21f1fc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m142.h",
+      "bytes": 1257,
+      "sha256": "0aca4711de495c34f7013b26a502b2542c73f3d6b14b0ccf4ef0b6f0af0f740b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m155.h",
+      "bytes": 1199,
+      "sha256": "b6ffc471d2bd65236ee48cd092b08aa98487d573e7aabc945286f218ddd55ba3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m190.h",
+      "bytes": 1951,
+      "sha256": "743bf950fc7650d1105668a61b76342838cc86152b94437c81aacabcfb3ea00b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m191.h",
+      "bytes": 1632,
+      "sha256": "2a22438760024a89241257f915b5c308c93d84ac29132a21a3e5ae31e8eb503f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m192.h",
+      "bytes": 1625,
+      "sha256": "c69164c2dd92b77cf83382eaa1d6253226af1bce3b4c5cf9cf078300e803a43d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/temperature/m303.h",
+      "bytes": 2386,
+      "sha256": "8de7d08ad5ade14003283c6da46bd6ecc3eeef0e9e679571aae6b550feb69390"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/tools/tcode.h",
+      "bytes": 2873,
+      "sha256": "df1fb275c0067b2c88fb6d882e6c15d72cbaba06f0c246fa6bc2dd841e246491"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/units/g20_g21.h",
+      "bytes": 1366,
+      "sha256": "155accb1dd7b4026d2860b0c76bdf5d498cf983d162576910e32eab05b9dbb5f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/units/m149.h",
+      "bytes": 1347,
+      "sha256": "6d70863f77d96d759f149a47ea17b0da6ff43424608efaa71cfd3c4c104478fe"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/units/m82.h",
+      "bytes": 1115,
+      "sha256": "571ebc361afaefa8b821af23168aa350d8adde7551ec123f77ee4c78a232b35a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/gcode/units/m83.h",
+      "bytes": 1144,
+      "sha256": "df98c8be1f18b6f3407efde340473952cda7360f0d6fb3eeaefed068a125c740"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/parser.cpp",
+      "bytes": 9540,
+      "sha256": "7a8511f7a8eaf7def66991d9d664d720432f3a0165cd8d547f5f8ff5cb298460"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/commands/parser.h",
+      "bytes": 12197,
+      "sha256": "a2a4a1fad4443abbce7fd767e2ad7f4655978b61fa858960de3e6440c6f8aaec"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/eeprom/eeprom.cpp",
+      "bytes": 110173,
+      "sha256": "29357eba2627d55f3386e55d6e6fa6d5c63148890a2afc936d6d2f65ca40e537"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/eeprom/eeprom.h",
+      "bytes": 4555,
+      "sha256": "140b73d29acf8f1ba671fb0517616d2b5f869763c66d41dc0b5dfc03ba2b64cc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/endstop/endstops.cpp",
+      "bytes": 25868,
+      "sha256": "de208bed549523d8ad7718cdc3105f32541ee20ddc523186629b0d8df6f6fa9e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/endstop/endstops.h",
+      "bytes": 6246,
+      "sha256": "24fe5c5c98ef0f1ed75ae1757fea4822e9799099ce6e9541d696b325e2fc40bb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/endstop/sanitycheck.h",
+      "bytes": 1545,
+      "sha256": "ceb5a41eb6e17d0c93f24d8e72304e5924b0d1cfd44b7add81525fab3bbc0a9f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/fan/fan.cpp",
+      "bytes": 5901,
+      "sha256": "d67e3902f698b0b690974ccf1a9c1cf1ccbb7d48aa1049d766ac34a15bd33ee9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/fan/fan.h",
+      "bytes": 3053,
+      "sha256": "589d3970945498d6635f57262b3ddce370bff7a4410c19e4443c99b92ec25f7a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/fan/sanitycheck.h",
+      "bytes": 1775,
+      "sha256": "0d7451a5fa9afac7c02e1041e55bc686b5c694d67e16b808a0591758b4282e2e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/heater.cpp",
+      "bytes": 10210,
+      "sha256": "c4be8033fe85b484ccdd70130338b94ebc6ba4b8dc510d5885aaf9ebbfc0aed8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/heater.h",
+      "bytes": 6160,
+      "sha256": "279305afc894d0f3a5b26c40757282601d2e981307ddb250ef86849734a4f590"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sanitycheck.h",
+      "bytes": 1599,
+      "sha256": "7112333249c0370e8cc5e168f4549d12f137b3d4a6561f51d7620fe1507c9e16"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sensor/MAX31865.cpp",
+      "bytes": 4853,
+      "sha256": "f7f7a08b2ef2f75850fb271cabe7bcf15fce9baec9c45eb5b7683bebd79798f1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sensor/MAX31865.h",
+      "bytes": 3125,
+      "sha256": "6d266eee5d3a324cbb96ea548d20b5864699af7b2aeb99438c90d942696e4d2b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sensor/sanitycheck.h",
+      "bytes": 3141,
+      "sha256": "7c2db786bf279fcc54067ac1755ef73798387162acba33df4cf3ca31e8967492"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sensor/sensor.cpp",
+      "bytes": 6926,
+      "sha256": "38f2d1e5aafe196f711400ed181f9aef23158a8d8f5b3dd84877ff5e42c5adf5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sensor/sensor.h",
+      "bytes": 1757,
+      "sha256": "b988cbb4711540f40359a6219f3d52cd921d8a72836131208e7788c75e05d735"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sensor/thermistor.h",
+      "bytes": 9439,
+      "sha256": "b8358932eeeb693e06801a63a5cd9867072fd7d57877d2b7bf2ee01787be7ae8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/heater/sensor/thermistoramplifier.h",
+      "bytes": 2064,
+      "sha256": "31f301a7bcf5d8e8538af3447e42ec8496b9a020c19780c31dd20d71780e40af"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/cartesian/cartesian_mechanics.cpp",
+      "bytes": 37892,
+      "sha256": "d0219e4ff6f57d0746a827df5ed6cadb33585aea91942bc0047ca7e604d70e34"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/cartesian/cartesian_mechanics.h",
+      "bytes": 6798,
+      "sha256": "eba19ffe373d5eff972a6e7d3aa3279746521d35b733ddbc464b04cdd87ec9fc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/cartesian/sanitycheck.h",
+      "bytes": 1126,
+      "sha256": "006c5ddb97fe6416692cff3582cb417c23e279c9cfe934ff44c400359e15b0c1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/core/core_mechanics.cpp",
+      "bytes": 23857,
+      "sha256": "5faf8dc20c4878f3e9ce15614bb42c70ca92038276c8ea7e40932f82e522461c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/core/core_mechanics.h",
+      "bytes": 3756,
+      "sha256": "1c54f0034f96278fb6eb45a2c9c7065f0a1313bb0f77646921234f8ad8b97a46"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/core/sanitycheck.h",
+      "bytes": 1753,
+      "sha256": "a64badfea311ac3ee8fbd53469432dfdb2abcc86b8318122a6d19f725cedfd3b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/delta/delta_mechanics.cpp",
+      "bytes": 33672,
+      "sha256": "fa7a1c1da01a4eabc097f5ec9ae28f9be6550256eca7dbe16620a2bfaf31d621"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/delta/delta_mechanics.h",
+      "bytes": 6290,
+      "sha256": "377fb532d6c5e3d9f1a9e54fcbd385faed994c202a89a6051da563052d388289"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/delta/sanitycheck.h",
+      "bytes": 5906,
+      "sha256": "709efce74805161622957f616db251a0d50e73a214297e341bee49a29849afa6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/mechanics.cpp",
+      "bytes": 35664,
+      "sha256": "bfaa374346c6a15d0308d373c09ded3cc055d7b57bd5bde6ac3698ca82a83fe4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/mechanics.h",
+      "bytes": 14425,
+      "sha256": "c9e7baf5010b840a94f25f81dad3dfea3697885688ccf6ccb41401993fe932a7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/sanitycheck.h",
+      "bytes": 14519,
+      "sha256": "cbf03492369bec03dab4b6aca519867d8b78699c75c9ddd94ecef5a5957562a3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/scara/sanitycheck.h",
+      "bytes": 1962,
+      "sha256": "97e2c5892d1429644a6702260eca9a1b8db15dc27e27ce75501b32482e0da422"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/scara/scara_mechanics.cpp",
+      "bytes": 24738,
+      "sha256": "7c46dcfee5ae049bec4ee19b6409d1a20bc9adfbe4323c67d45bb61245113fe5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/mechanics/scara/scara_mechanics.h",
+      "bytes": 3814,
+      "sha256": "93d94b6688a093aaf1f6f05157d32ddb7593eb7bcbdb69444b98e0019f9e92a0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/planner/planner.cpp",
+      "bytes": 88169,
+      "sha256": "ed2add764f7adbf77d9bb9cf01ff34c102aa631f9fa20c6dbaf1a572a82f02d0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/planner/planner.h",
+      "bytes": 18543,
+      "sha256": "2a3ff9120fc892b011354ab03db80c9930b8cca7553256b4cdc88525233113fd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/printcounter/duration_t.h",
+      "bytes": 4492,
+      "sha256": "c58663c676093e32f5b04b02f7f67b2c23388a3773a839fb585e23ced0c91e29"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/printcounter/printcounter.cpp",
+      "bytes": 5172,
+      "sha256": "448d94c80485e700ed32271a719fe9e6472139a0a0dbe8382939a39944370f5a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/printcounter/printcounter.h",
+      "bytes": 4445,
+      "sha256": "dc33404dfd7c3839e198e57e0e0c5d556aab54dfad4c9b0c40b0b8c534cc7566"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/printcounter/stopwatch.cpp",
+      "bytes": 2556,
+      "sha256": "80e48cb209780ef314819b29db72fbd62b60f3be32ce80527429db897567c6be"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/printcounter/stopwatch.h",
+      "bytes": 3604,
+      "sha256": "4e517645e6ff9677863d08ea08f7b8ae029fbf3005475ca347ba50a67a378c35"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/printer/printer.cpp",
+      "bytes": 45676,
+      "sha256": "4ff19d894b94ae3377c67f250df72bebd6b6b43853ae6dde0cd75d1fd6b54b78"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/printer/printer.h",
+      "bytes": 12993,
+      "sha256": "ba98002fcd0c1e8f2ee0cc08fb847796a4bc760ea06b221f3a4bcae6ea93b118"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/stepper/sanitycheck.h",
+      "bytes": 10289,
+      "sha256": "c5a4fe1a6401c9be58aafd8d73db9e6486630eca03930f7df9f5af3d3a7ca648"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/stepper/speed_lookuptable.h",
+      "bytes": 13489,
+      "sha256": "1ba923024c045a1c18b6221392fa199b10b52484a7ea71cad3f9b0c6b075f4d3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/stepper/stepper.cpp",
+      "bytes": 111004,
+      "sha256": "c2d5220b6152a1f9c9106b1c525a648282a7abbe7c43adb7ff98845e5be75aa4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/stepper/stepper.h",
+      "bytes": 12722,
+      "sha256": "18a69a05fa7a6c870ee1771da22e1f9f5192adab2a4e55e261f02f825ea08d3b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/stepper/stepper_indirection.cpp",
+      "bytes": 18533,
+      "sha256": "719022733a7731b62a677e34f5e41c1bb6f089563137b2626b9234852ac32cce"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/stepper/stepper_indirection.h",
+      "bytes": 38202,
+      "sha256": "a50d5667bd507c0ed6f49efd54b74d7d37e2452c5e626788a4705b64e56b79c4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/temperature/sanitycheck.h",
+      "bytes": 8895,
+      "sha256": "588199c63f28476a7c071d874437ee7917062b9bf44a9073d43dedfb8de1c530"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/temperature/temperature.cpp",
+      "bytes": 27100,
+      "sha256": "f7733f9db256d2f3d75025cef66a4f7f63b45b3fddc6e6cf5dc495fa02375f9a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/temperature/temperature.h",
+      "bytes": 5644,
+      "sha256": "5fe5c8455cff948d4a917505caa297bc19480ecf6f45847a9052aad1ebacf875"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/tools/nozzle.cpp",
+      "bytes": 7370,
+      "sha256": "76d79d6ea591c1468884ca51169920cca357b71061038280d1dd4021f5d71a78"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/tools/nozzle.h",
+      "bytes": 3192,
+      "sha256": "c616053afb993df0602edbf80143224dcdbaa40220742b374302005b2e5a192f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/tools/sanitycheck.h",
+      "bytes": 11164,
+      "sha256": "def09d79d5f4c5c67bb314d91825be6292131a354542346e6adbae142cf38cfb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/tools/tools.cpp",
+      "bytes": 27655,
+      "sha256": "a22834dc7bf11b9d10dc5b08126d889b7130420b9305f549316201c70180265b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/core/tools/tools.h",
+      "bytes": 5704,
+      "sha256": "02b0e20e8845f4417577b8217a79a4f3b46cb2572b48efdc7c380e46e68b9109"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/advanced_pause/advanced_pause.cpp",
+      "bytes": 16984,
+      "sha256": "1563243641c5c67a9cbee89acd4ce4a05bd1c96e32ceaaa9576584914200ec21"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/advanced_pause/advanced_pause.h",
+      "bytes": 2932,
+      "sha256": "32d24ed4156246005c312595121dd5ef76589c2077043cf036f3954614103677"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/advanced_pause/sanitycheck.h",
+      "bytes": 2034,
+      "sha256": "063061b5ed1743db417eee9a1e3b3e73ecbb5d16dceeecb954cfb67a1946b0a9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/babystep/babystep.cpp",
+      "bytes": 3279,
+      "sha256": "ef87473695dac10b8d177cebe3b988bd838afc51ba35db72f66fa507d54e98ba"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/babystep/babystep.h",
+      "bytes": 2389,
+      "sha256": "5a99f747ed55b4c73b950cadb2bd7b3b042f2cc4b7191bcd67207cd5a19ff78b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/babystep/sanitycheck.h",
+      "bytes": 983,
+      "sha256": "29a361530b829116bf15329f404f85b13392bd6a4e6156f1b7f74c5c91d24597"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/abl/abl.cpp",
+      "bytes": 15493,
+      "sha256": "ea0bfece6e9659ccdfdeccb1cbe95aa8d2d76a7ccc4f36ca988fd9a744293d3a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/abl/abl.h",
+      "bytes": 3288,
+      "sha256": "6a6b853716a7c493cd410de08d5f72b8f3249ce43a11c87c99a5c635b40abf1c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/bedlevel.cpp",
+      "bytes": 12766,
+      "sha256": "aa63ad32c30edd7b0c4d5f7a6a4e72b1763e6edea4f036904c4f79d7ed083301"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/bedlevel.h",
+      "bytes": 5863,
+      "sha256": "8756b51795984333017676e419a57942f7704c7ce5bab8cb307607a8651680cb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/math/least_squares_fit.cpp",
+      "bytes": 2422,
+      "sha256": "df64a54afe44ca880b26a4a32b0b43d6ac2506492ff55f979f8ae2e3f20f2b41"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/math/least_squares_fit.h",
+      "bytes": 3179,
+      "sha256": "80631c870d57852fc82111e6775c5d1e197beaa37db828e1ef36ae59dafa59b8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/math/vector_3.cpp",
+      "bytes": 5780,
+      "sha256": "66e427f32185f5a11626bc461668518442efc42c128a333144dd2e09fb8b26de"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/math/vector_3.h",
+      "bytes": 2749,
+      "sha256": "0ff01938b7e1d706b32ac23122b3ed67380a604ca1b7d7b83396c62163923b9c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/mbl/mesh_bed_leveling.cpp",
+      "bytes": 4802,
+      "sha256": "a0b118d621c04e67e2e98c4dc61599993c54f09b9a5a1e0ee9a598a2cad31ee3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/mbl/mesh_bed_leveling.h",
+      "bytes": 4563,
+      "sha256": "ccf9459234e4e75f5b624d5cbf6a05ac898948a5ce7235b6214af62e6ff733b4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/sanitycheck.h",
+      "bytes": 3539,
+      "sha256": "b156953d2f111cf128aa1c5d6a6a6b73bd2f7672f264b6ffba36f9ade442e477"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/ubl/ubl.cpp",
+      "bytes": 8804,
+      "sha256": "d6eb9696857490eec53e2ad49bb16d6799aef7da3469e0f83841dbd9dbdc8cf5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/ubl/ubl.h",
+      "bytes": 16554,
+      "sha256": "719e1d93323ac383bd4c2d4951371e6dfc708ba0f277148ff1e4db9e233cc52c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/ubl/ubl_g29.cpp",
+      "bytes": 74425,
+      "sha256": "9d1fafe5b50b995d4e2b99ece8f33c61c6fe42ecadbdc4465a33808ed8a28335"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/bedlevel/ubl/ubl_motion.cpp",
+      "bytes": 26048,
+      "sha256": "f72af10a2ac1f19ab3a11fed4cc0e03b5191b1d1d708f1e5808fb05a80b0c332"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/buzzer/buzzer.cpp",
+      "bytes": 1962,
+      "sha256": "210782a2c16c1f3d825daf3b819b3228ba1bfdf6710294a7f0def98bef24acfa"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/buzzer/buzzer.h",
+      "bytes": 1240,
+      "sha256": "820f415d40cd4cb3d15792f80107f47bbc08805242f6d91c4e33b70a0c36e5b4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/caselight/caselight.cpp",
+      "bytes": 2139,
+      "sha256": "0f172e5b74e0133dad8a52193d8b3643d503080efffdb31d5bf18ddaab3a2cc4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/caselight/caselight.h",
+      "bytes": 1280,
+      "sha256": "16fbbb5784c37a9f4184ddaba6820ce10a578fbbea3c2275b1ce1d9f8c0e23c8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/caselight/sanitycheck.h",
+      "bytes": 1791,
+      "sha256": "616e349a02d6fd0f24426a1882711ac15bcbbce69cfaae6dbcdf942e6a4c5d07"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/cncrouter/cncrouter.cpp",
+      "bytes": 6189,
+      "sha256": "0d1351155925bc0b25e95537e41095e80a0c5b8f9547e07eae6969ece6acadd6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/cncrouter/cncrouter.h",
+      "bytes": 3285,
+      "sha256": "840ead62bcc9ce1f0948f72831c7b63649d2cf31cb80be7b73ad04d10708c310"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/cncrouter/sanitycheck.h",
+      "bytes": 1243,
+      "sha256": "ad9514d5b1d24d1e2305bbbc1aff53cf4ce63f32c548f5806d51af248b42b9b5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/dhtsensor/dhtsensor.cpp",
+      "bytes": 5276,
+      "sha256": "778efe6717c1bcc9bf03a030dd0238cabf0b1888b9cbabf302dad166e8ce7187"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/dhtsensor/dhtsensor.h",
+      "bytes": 1830,
+      "sha256": "97c1b2d5afc50f38d3e4073201135d26fe7515b08e1b73f0f8a73764319e4cb7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/external_dac/external_dac.cpp",
+      "bytes": 3424,
+      "sha256": "9caee7a5cada0041f26607f2499ff44f1dc03bed8c17d79742a09ab8943c913b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/external_dac/external_dac.h",
+      "bytes": 1499,
+      "sha256": "88a56a44cecc09cc30e0842e6d3d4a485745ceb4a8e15acf9dc378bbe56e3dfd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/filament/filament.cpp",
+      "bytes": 1703,
+      "sha256": "0a163af9a41372251fb710368ed2f85accc2a633ee76e3a88a11d2c7b4f844f9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/filament/filament.h",
+      "bytes": 1728,
+      "sha256": "ceb8feccf705f42ae8249fef475fe7ad415e305aa50ba4547baa5dcde7dd89b9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/filament/sanitycheck.h",
+      "bytes": 2171,
+      "sha256": "b2dd70d297863bf7f66bca5e037c0f14f574dfb1e4fb277709b2dc5856ca410c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/filamentrunout/filamentrunout.cpp",
+      "bytes": 2993,
+      "sha256": "6128e9923f4da41882307ba9630a269608702515c37265e197103948a23bba07"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/filamentrunout/filamentrunout.h",
+      "bytes": 2397,
+      "sha256": "41c231d514e8dce8e7127fe9a835a1816f4e94777a2201fdb6a88a450f207725"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/filamentrunout/sanitycheck.h",
+      "bytes": 1811,
+      "sha256": "fa6adb56cdcd9b91198b47b180cbfdc650e25a09f0950f3640523b1634c0749d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/flowmeter/flowmeter.cpp",
+      "bytes": 3532,
+      "sha256": "b163e218665db3c0efae0c5793b7574947472bde81f03322e0cd8c8696059f89"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/flowmeter/flowmeter.h",
+      "bytes": 2626,
+      "sha256": "b2b39b930683474632b1ca8e6a177d6e47685cc938af14b92e55be262bee00b0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/flowmeter/sanitycheck.h",
+      "bytes": 1257,
+      "sha256": "4615104fe31905426ede69ea27cd8828bab0fb7c4b12b78a53618ac24193f244"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/fwretract/fwretract.cpp",
+      "bytes": 7322,
+      "sha256": "b1e98bf5172b82ef7717935c88f7db73980d402a53661669e11b6f750bf6bc42"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/fwretract/fwretract.h",
+      "bytes": 2913,
+      "sha256": "7895378c6267264ee91a51b319427dc7c6a3159d6f0292d97ba89a5091ad4058"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/fwretract/sanitycheck.h",
+      "bytes": 2306,
+      "sha256": "bb07638d8e9cf4355cf5ea5b4c8410d8cc7eb6598c5d2ac8f7e80c643d756bc3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/laser/base64/base64.cpp",
+      "bytes": 3952,
+      "sha256": "4e53bc0eead05ff972a0e1c3fcb73e548b13a9b97cdc6624f42ce4c5656a71f0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/laser/base64/base64.h",
+      "bytes": 3634,
+      "sha256": "ae130048da757a7e34b580166beab062895818df4ea031203717b00420d57db5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/laser/laser.cpp",
+      "bytes": 6410,
+      "sha256": "415506bfcda72e5fa3ea1cfe988fe4c0ff1adbe5e4e1220f1a14ea1f49e794e9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/laser/laser.h",
+      "bytes": 3198,
+      "sha256": "b6ef172ba648c39517eae8308e7952af5a9b5422ce2e480dda370868252ba3f1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/laser/laserbitmaps.h",
+      "bytes": 3030,
+      "sha256": "7ae99e9485c28357c13d8c7f604fbc483264b8c438888ba9a1349f5950f07d4d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/laser/sanitycheck.h",
+      "bytes": 2022,
+      "sha256": "d182b139134f7cfb277b3e2851530f435c6ef6557e34f9a6e40ec2d6ac6ffbd3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/mfrc522/mfrc522.cpp",
+      "bytes": 9122,
+      "sha256": "34372e9555e030e374e42b31b085356751d839e5dae8723621391ebc851b7f5e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/mfrc522/mfrc522.h",
+      "bytes": 4071,
+      "sha256": "ffbe4543abc95cdf880c79f52f710568de402ace852c2472f4630e98abf39f4f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/mixing/mixing.cpp",
+      "bytes": 3323,
+      "sha256": "5927ba3b8046e3c6c47063c131144a37a17803575c69be3d564d707d89b85673"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/mixing/mixing.h",
+      "bytes": 1376,
+      "sha256": "ea362e8220b16fdd77cc58665077d5fdd8f26b966ae1483e3e337b2950809888"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/mixing/sanitycheck.h",
+      "bytes": 1551,
+      "sha256": "411311546721012170cd0d674807448eb20c709998ef55dbc66479127b5267e1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/power/power.cpp",
+      "bytes": 4686,
+      "sha256": "35aeaa29dc373b3c26868bc19bc0062c7aba246742bf97bea621c3749bb908e3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/power/power.h",
+      "bytes": 2278,
+      "sha256": "cafad66e010d5ac8a0be9c2226b8e57d16038077f0fa42838c60d508b46c83fa"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/power/sanitycheck.h",
+      "bytes": 1960,
+      "sha256": "cf0335cb7521d1b524df0d9fd3f17a8b88a1ada83f294aa8b1bb43a41f0aacb8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/probe/probe.cpp",
+      "bytes": 15495,
+      "sha256": "d668696044b770e463ae3b4587f85f3c1e52eb43215829b56c71567b50f24548"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/probe/probe.h",
+      "bytes": 4294,
+      "sha256": "50bf40a199d4c5a86689be78c89da816967c1b4c7a4d191de8cd2e1df258c234"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/probe/sanitycheck.h",
+      "bytes": 4864,
+      "sha256": "d8836a5249f8ff04c8cc670b92a8d140f14224226c4ef8286097acf93b1cc282"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/restart/restart.cpp",
+      "bytes": 8043,
+      "sha256": "99a7f96d45a6ead467442bdc3b91e473a91f4ec268646c25ac034a9c06934852"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/restart/restart.h",
+      "bytes": 2639,
+      "sha256": "a474669b2611e5552e1743ba1544f4902e158c1bf7f5a18e44218d376115909a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/restart/sanitycheck.h",
+      "bytes": 1080,
+      "sha256": "48a2f2e4fb85d85e814e39bd606af8e4a452685df3e5af9f27a5f201fb7447e3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/blinkm.cpp",
+      "bytes": 1478,
+      "sha256": "892441b1473b6febfb95b94bda5efa0ddd24009c25c5b8034efef48f908ff815"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/blinkm.h",
+      "bytes": 1154,
+      "sha256": "334c2c025e060cfdeb6be7f967ece032a6c7c3453ee561ca5e9751cc20f68f97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/led.cpp",
+      "bytes": 4282,
+      "sha256": "5dc870ab7e1ee6525e18215176ec7d22d62598e0c203e9294b7e197096a5bed7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/led.h",
+      "bytes": 5721,
+      "sha256": "73c1eae62d89f4e419bcf8e423d7b0d504f8109423e8c2e427947f7880c5897e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/neopixel.cpp",
+      "bytes": 1999,
+      "sha256": "3862115d5a8bac97b3729d0037b842a05f15816bda93bab43d7dc9b739a80749"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/neopixel.h",
+      "bytes": 1654,
+      "sha256": "200cfce304f296329076dbaf14314a9b9134f1d05199e908c3c035f8bd5695df"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/pca9632.cpp",
+      "bytes": 3720,
+      "sha256": "0d3ccf065961a4f618f0c2f4a88863f4c8fdc904a82bf70755d195db03e64514"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/pca9632.h",
+      "bytes": 1215,
+      "sha256": "2baa46f496e1db4aeb5abf6ef0aa8e9c82dc299f31abcb12029e0f2f94ac5f90"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/rgbled/sanitycheck.h",
+      "bytes": 2336,
+      "sha256": "13ccc8514487934bab3a444de332e899ba7ec9af1cec2acd7b7b4cda7fcf1852"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/servo/sanitycheck.h",
+      "bytes": 2201,
+      "sha256": "7fe692663fa5845ab0c4f0f75cf2f7423511259e4cd503e8d52f6c88549a7e4d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/servo/servo.cpp",
+      "bytes": 20328,
+      "sha256": "5dca1d3e2ba5c9d7ca20e3f22b50a1d49da3a9d86a6a761674637432a221e8ff"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/servo/servo.h",
+      "bytes": 6457,
+      "sha256": "01e472ec7118787623f0636d28508f0d96a7d2ebc510c54dda6f1697c43e9449"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/tmc/sanitycheck.h",
+      "bytes": 10095,
+      "sha256": "2e6d7c7f53e50f5f37aea61cb61852374bcf84ab7818afdc1faf8232471759ab"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/tmc/tmc.cpp",
+      "bytes": 20556,
+      "sha256": "508446bba2e80beccac42e44babae8dda4939a73a773a46bb245f8b922cb8ca3"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/feature/tmc/tmc.h",
+      "bytes": 3676,
+      "sha256": "42e47119737c214ec3eacdf7ce9839b9472b200196bc8ab42b6c237f550a1f90"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/custom_bootscreen.h",
+      "bytes": 4577,
+      "sha256": "ff4aa427c25113c5eb196e4df9d3ed2c8a2646d49282a74d72a2297fa895e49f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/dogm_bitmaps.h",
+      "bytes": 51579,
+      "sha256": "a1683dc40328c0a796f752a8dd4ece9441df703e1d5e729413c39e9c1224b068"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/dogm_font_data_6x9_marlin.h",
+      "bytes": 10613,
+      "sha256": "4997916fb010b1d70a904deaa63d1a95e580273c809917b0b80b4a4385df350f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/dogm_font_data_ISO10646_1.h",
+      "bytes": 23313,
+      "sha256": "b0f53832686bcbde254a2e5aa10933274a00f1ca4747137e6745011dd66c7c53"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/HAL_LCD_class_defines.h",
+      "bytes": 3251,
+      "sha256": "f6ba754ea6cb9a3bf4f773c56b18e642666bea0a577605ba8e3c1e54ae31cff6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/HAL_LCD_com_defines.h",
+      "bytes": 3340,
+      "sha256": "228afeb3b667e4a71ca9551fd92cffd77954c279a5ff746e06ba449a2b491240"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_an.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_bg.h",
+      "bytes": 5472,
+      "sha256": "fda6dc938b3059cb309565de6d3c230373c7a9e1074b6a1b188c9b57548e9ae5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_ca.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_cz.h",
+      "bytes": 3574,
+      "sha256": "ddf39e35cf395846a2831d605ede727f222da611dcf59fbe81fe00a78d94ba7e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_da.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_de.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_el-gr.h",
+      "bytes": 6293,
+      "sha256": "d4bf75818f49c329d65ed8e2674419252a176e5bc25f1f4a4139667de6be724e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_el.h",
+      "bytes": 6613,
+      "sha256": "2dcc6b81ec77221f5a415a918cf77b5865bd66daa4d8d5aa7fae6d55dd5fb267"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_en.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_es.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_eu.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_fi.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_fr.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_gl.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_hr.h",
+      "bytes": 2078,
+      "sha256": "e358a14aa45e81bed4de6a5afa44597d78d69edd9cfcdb03fff2976097b99e62"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_it.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_jp-kana.h",
+      "bytes": 8666,
+      "sha256": "aa1f38dd53f3556afe57128157788abe1c46eeb696edeeaabcd7d6f0757fe789"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_nl.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_pl.h",
+      "bytes": 2610,
+      "sha256": "4e58155442286ff2c16c914ae15d3cdc5dfb2357c8bd2c37d1631bd9f76ad32f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_pt-br.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_pt.h",
+      "bytes": 365,
+      "sha256": "5a1f432c3df00332d0ea41f397c777cfcf35ed8fd09e2d70213d7b15f2fafc97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_ru.h",
+      "bytes": 5769,
+      "sha256": "a3962e2643bbacd11a4e14c498699c8a911c7edf44a94bc00056a38209e6426e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_sk.h",
+      "bytes": 4176,
+      "sha256": "c5d3465178595cf9a478ca36bda403f55b9d1ccb12678af8e93a8da459995785"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_test.h",
+      "bytes": 18203,
+      "sha256": "0d00eee00bb2a203e9592e3db0226c83386276b857ff1d3db69056aa87fcb27a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_tr.h",
+      "bytes": 1417,
+      "sha256": "33cab64f077224f585c2393054ca0f0312c40a5eb6105eeee966ade9be4b4e78"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_uk.h",
+      "bytes": 6762,
+      "sha256": "8f70c993db0170c6d7a66c87fceda46f97b0b923d12bc2287edcb952acb8e051"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_zh_CN.h",
+      "bytes": 104584,
+      "sha256": "ccc1d2bfe6692b3f3fd9856bfc5ff0aaae1592259c50983655253664d8e2f18c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/language_data_zh_TW.h",
+      "bytes": 110990,
+      "sha256": "4594cfc274ee421f2ce2654fd20abe75aa3aa57f4ff9e01da01c905fca33998f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/status_screen_DOGM.h",
+      "bytes": 15004,
+      "sha256": "e5ff5a24f0b302164dfb2f16f2a90634a192c987451527a27ac0fd68567f8587"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/status_screen_lite_ST7920.h",
+      "bytes": 28018,
+      "sha256": "9c2915d82d9c49851ccb4ae4b3ac73f9fae796d3fce8fed0a0a3d145bd3f06a2"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/status_screen_lite_ST7920_class.h",
+      "bytes": 4556,
+      "sha256": "902f0cac7b31c86530296121b8a5eb94f63e8a36198ad05fdb239a9f050b1b9e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/status_screen_lite_ST7920_spi.h",
+      "bytes": 1107,
+      "sha256": "5215e15550ca961946a8b5dcb34f6f9ec3127fc5644969e9e09fd128301d681a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/u8g_dev_ssd1306_sh1106_128x64_I2C.cpp",
+      "bytes": 11480,
+      "sha256": "812651ae76093b5e915c3eb3ed7e23e2baed611201603ecd6ecec6c907a88389"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/u8g_dev_st7565_64128n_HAL.cpp",
+      "bytes": 9465,
+      "sha256": "5a26f0f65c906c929a9a1391a5e1927f3d0ebb1812fedeeb841923b80b5291fe"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/u8g_dev_st7920_128x64_HAL.cpp",
+      "bytes": 8459,
+      "sha256": "67aa63afd65e4f03b5f48723b1080ae72fb52b671732872345ed46715fe15bc1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/u8g_dev_uc1701_mini12864_HAL.cpp",
+      "bytes": 7522,
+      "sha256": "286f461b72f4fe1d18032b8c7f4b51821b32146066e3471c3656f00449c7de82"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/dogm/ultralcd_st7920_u8glib_rrd_AVR.cpp",
+      "bytes": 6942,
+      "sha256": "bdf468e90b0d99db9f6357258d2db2109d6ab2bf4a5b2f45ff9234e67ac8f372"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/fontutils.cpp",
+      "bytes": 9003,
+      "sha256": "89a12179bb4d936838767bebef3aa22f20eef337c44b34e1d7672fd5b1ae5c49"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/fontutils.h",
+      "bytes": 4207,
+      "sha256": "b36621d587de816be8c984f953f0ccf943592f2b22b8a59f4d4a7899475e1f68"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language.h",
+      "bytes": 15731,
+      "sha256": "912fddfa20767a74aaf26953570c107e5b0fd99af79f018c228f3c772a8dc36c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_an.h",
+      "bytes": 14943,
+      "sha256": "633399f38affb1165c85fec080f959ffda458aeee9bf23023250c2fbbb813d00"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_bg.h",
+      "bytes": 9446,
+      "sha256": "49938ac25c5d8a90df9683bf45fc170ab656c58a743abb131742c43d3d5108d7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_ca.h",
+      "bytes": 15484,
+      "sha256": "86b928cf3bd3d798b086e860501acdcc745359230e4002ec74eb2e598bce2597"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_cz.h",
+      "bytes": 24641,
+      "sha256": "e48097acd73afae1041e3509b0458bccc3755657b434e5a50607b7f413f33947"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_da.h",
+      "bytes": 14544,
+      "sha256": "5c1ca034174dd43b5fbaf96cbea2ed78123e27386627958828dde15234f688ef"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_de.h",
+      "bytes": 25041,
+      "sha256": "dfbec90e078b30872679b0263976de985699fe42cd54bf30b0cb9773f0ac4590"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_el-gr.h",
+      "bytes": 13445,
+      "sha256": "923979dba19f87ba569858135fdc6d2180d5949b013181f289dea34478a09fc8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_el.h",
+      "bytes": 13814,
+      "sha256": "fdee47840493130b8b68b8f79fee55d56ca9a8bc1cf0ed08c4733c29284bf96a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_en.h",
+      "bytes": 69513,
+      "sha256": "ed3c7c27a8161f1ec35fa2db9699c740f1ac3db62b577559f721f381c84db27d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_es.h",
+      "bytes": 15900,
+      "sha256": "4320b19ec2bbb996dee138e9e1db48ebd95fe80e8ec086001c1dd296a87b5c2c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_eu.h",
+      "bytes": 24762,
+      "sha256": "846a56de8f0eeb197f66778b240a06df28e8fcc3a5e2faa44c82ef7cafb89650"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_fi.h",
+      "bytes": 9711,
+      "sha256": "6eaa3c79da4504c96ca74debe7ba492f9b791af4b40eb90c4b059282b6e0dcff"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_fr.h",
+      "bytes": 24176,
+      "sha256": "9262cd19ea425833d1698abb4d2968f9a2a670f7dfe2de72b9c653caec9a0285"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_gl.h",
+      "bytes": 15003,
+      "sha256": "4d27c87c2d3a389d13141198d1f0d30dd1c0766c8ef63206edb4ebe01b0a57b5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_hr.h",
+      "bytes": 14885,
+      "sha256": "ec34f58f2749fce3e7d6137031ac877a8e53dfde76b3efb15f19fb3775ddc5ba"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_it.h",
+      "bytes": 28167,
+      "sha256": "4ff54a8bdaf52e0a344aeb241427f2ad0d254c9d7cf118823cbd92cd4818238c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_jp-kana.h",
+      "bytes": 20747,
+      "sha256": "39550d32d8d76bc6b21135b8658b99e6584c7d614bf9e033885bc40f0b97eb70"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_nl.h",
+      "bytes": 16967,
+      "sha256": "01354c8ba37238c465aa808efad53dc758443f3b81a8fb8831cb1309ae5bf831"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_pl.h",
+      "bytes": 15046,
+      "sha256": "9a2708366fde9c310d8401abee39c89121f44e58154ded0ff260a8a4081dd9cf"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_pt-br.h",
+      "bytes": 23237,
+      "sha256": "b3d16b3a02b71dcf6e60d91d6f85693abd3bf249a89f4bcbf201fa551d783b3f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_pt.h",
+      "bytes": 11157,
+      "sha256": "7e6df2994a7b6c0df9cfe8c40986c0ccc3270a42fafb59056bf2e0f281a0242d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_ru.h",
+      "bytes": 28964,
+      "sha256": "0dea28feb41296669c2e1c22199f989e6ad7ccf6f6d0cde8778b62686bb01945"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_sk.h",
+      "bytes": 25385,
+      "sha256": "49fe88945a37840e17bda6dee35ac2f4abe1a23fcd410d948c6788fc14d0a31d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_tr.h",
+      "bytes": 26569,
+      "sha256": "fe407a21e68e7ef9f847ecdd7798a95c09b2f5ba6cfab01edc79f4e8435e7f40"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_uk.h",
+      "bytes": 15650,
+      "sha256": "e777580b79937bcb7a382b437327da918bb3f8ae9bafd89e3f9346f8c97ba60b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_zh_CN.h",
+      "bytes": 30972,
+      "sha256": "068ec8410cafb515c0fc97127c0e287b458ce2b591553084878de9c5c3dae12e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/language/language_zh_TW.h",
+      "bytes": 31060,
+      "sha256": "9cc23332a96c4df97e39db83e1300f5dd54739a32c023ca98578832eadca39a1"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/lcdprint.h",
+      "bytes": 1525,
+      "sha256": "8f5a94155a86354ee7df16b110b7a9703343632f043065374014d521d43b325b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/lcdprint_hd44780.cpp",
+      "bytes": 32893,
+      "sha256": "7f095c196d37f99c41666e470a5831da8cc2151c4f4fa1f3c9b49e6929229acb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/lcdprint_u8g.cpp",
+      "bytes": 2393,
+      "sha256": "748a64e1a87bee86b3804411dfdf25b9279066e215ebccee321413705c843c39"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion/library/Nextion.cpp",
+      "bytes": 22591,
+      "sha256": "2174af6fbff750bff54b69752ec9d38680a025a813b4130144b75130f932cba0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion/library/Nextion.h",
+      "bytes": 13306,
+      "sha256": "25f9020996606fd18b61a9e7f4d3391b686040df8dc3188e3bf72234caf1aa54"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion/Nextion_gfx.cpp",
+      "bytes": 5482,
+      "sha256": "874a4502aff18d7bb043641aad98c4efb04f3c9342d584de52df20b46fea0aeb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion/Nextion_gfx.h",
+      "bytes": 6533,
+      "sha256": "00b5156cceddf9437a9bbdd7b20798f891ce759faeded6dc7eb7d7e27d10ac4c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion/Nextion_lcd.cpp",
+      "bytes": 48244,
+      "sha256": "cd1b32edc4c77ddb74d9deacc764b0d6fdcbd57f2df676f8792b535a74970cc8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion/Nextion_lcd.h",
+      "bytes": 4679,
+      "sha256": "532064d2a4dddc5175e9d29bb1d3260428290bde8084f82e8ab02eb2b05a0b33"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/HMIevents.h",
+      "bytes": 959,
+      "sha256": "cdda6472ccc7e637f5e2c68bc38ca8310045bcce7aa3d3906423533bae7ebc22"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/NextionConstants.h",
+      "bytes": 2312,
+      "sha256": "e861dd92763140303ae8d60fe483892dcf3bd7ca4f6b58d19e08c12fbb3f8e03"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/NextionHMI.cpp",
+      "bytes": 13244,
+      "sha256": "98412c281f9079a0434a050f83dc81e22f7f8e1411d6aa8ff319f718b26ebc24"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/NextionHMI.h",
+      "bytes": 1672,
+      "sha256": "009cc8d12afcf40eb68badc739be254dc9dd843dc4574672fc512d3e58a4e946"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/PrintPause.cpp",
+      "bytes": 9026,
+      "sha256": "7487b380affc6577b4397181ed8240b5d31586d63d03af662eacdefc1f5396c0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/PrintPause.h",
+      "bytes": 880,
+      "sha256": "0353d34174fb59058230133a03252669700781f11f4531af03c4fae8e102a633"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateAbout.cpp",
+      "bytes": 1597,
+      "sha256": "e0a0db7122d50e3fb8e939cc4fb941ccc7a6e33aa83d0519620de0b301acbb6c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateAbout.h",
+      "bytes": 463,
+      "sha256": "c3e97ca62aaa054c0d12c13098cff5e46ce032ebfba20fe9491c8ab7e1e59989"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateAuraConnect.cpp",
+      "bytes": 3906,
+      "sha256": "63d4a39a9a22010af44f73f95ec02700421710425ea7fec78657e96acd9381df"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateAuraConnect.h",
+      "bytes": 592,
+      "sha256": "cacb203be48bb017da7b5ad836c5faebaf0ef32f0d93a32dd2eaa765e1952995"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateAuraConnectStatus.cpp",
+      "bytes": 1792,
+      "sha256": "60e668be71a533d13bd619ce55b3c7258a00c05c7266bc83a559958cdcd8251f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateAuraConnectStatus.h",
+      "bytes": 391,
+      "sha256": "4461a57ffc8f94fc442fa7df69299196612612e42a414e0267bf5cd7f76538ab"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateConnections.cpp",
+      "bytes": 4020,
+      "sha256": "3247cadcdc59e59ed5d622ed8150abd8ae7b4559bf44c3e7b72e37ffb6454c3e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateConnections.h",
+      "bytes": 384,
+      "sha256": "cd0a8ba54c035fcf861ef3cd50bec93416df07e4c8dc6fb6ec6f15936de4a6e2"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateDInfo.cpp",
+      "bytes": 2224,
+      "sha256": "437718a0f5cd13bfa9e31744a7adb6665e035d7718db9e8862076c2849f01327"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateDInfo.h",
+      "bytes": 508,
+      "sha256": "0b8335fc68a9a45aa1f66871d4ac3f266a9ed9dfb969bb17455b9d76e990f93c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateEditNumber.cpp",
+      "bytes": 1311,
+      "sha256": "12f1d60992f30153bb102e1ed4926926a978823dd35e713067ba71865c1d301e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateEditNumber.h",
+      "bytes": 612,
+      "sha256": "eae1d6566527cc70baeca5c0add543bbf6e0b98b757426a401fece4e4042c3c6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateFileinfo.cpp",
+      "bytes": 5342,
+      "sha256": "195bdd84724482225406bb4fe1595e210787aec8e1b7c8e78008caa768b7a705"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateFileinfo.h",
+      "bytes": 631,
+      "sha256": "55dfbaae7a46ddfea816014557c9c45343836e2f25341a2d9f2ce09fffbb5197"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateFiles.cpp",
+      "bytes": 9092,
+      "sha256": "7d158a140e3fea32edef8916b27ad0f00841045c8afcfa7430895d9f74a86a51"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateFiles.h",
+      "bytes": 696,
+      "sha256": "7d1150da30bb6ab3642a72123aafe61c80fa196b77c6b2abf0778abed74195af"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateKeyboard.cpp",
+      "bytes": 1392,
+      "sha256": "a6c3e4e3e0029f23516180dbe558673eb87403db4347eec1b3eed3531ef8042e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateKeyboard.h",
+      "bytes": 487,
+      "sha256": "80cdb17bf2055b7a482def223979fd91a2367ba7b5970e272872e2dbf840eedc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateMenu.cpp",
+      "bytes": 13828,
+      "sha256": "826092f9f362729bf17ab8f0de9065d9d796d8c6d41d9d989b1d6f1f6dc16a81"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateMenu.h",
+      "bytes": 1751,
+      "sha256": "5e5ccf2a6a116b1ac266988a964e40e8b9fd48cc3fba758d19f99683a37c8777"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateMessage.cpp",
+      "bytes": 3780,
+      "sha256": "924718c7b562c96204ecb2ede2db50ccea99b5f314b82894e67fc2bcbd42d6a0"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateMessage.h",
+      "bytes": 1221,
+      "sha256": "e2fda78371cd1ad0cf44328f71d40e988b1085795e3f1d86abf1959ef0c05cb9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateMovement.cpp",
+      "bytes": 5649,
+      "sha256": "6be42b885213c0ec58e3ebc4f3977afad8b688c91c86a27e040c9b9706177f25"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateMovement.h",
+      "bytes": 677,
+      "sha256": "cc3f715b552e140ffedb6f4949310ed7616366124d2bc8a0db1cef039c571fd4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StatePrinting.cpp",
+      "bytes": 10281,
+      "sha256": "c20813e3dbd26760e0b6f7ba04f292db2fe098ab09338fe3a154aa827c6ce59d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StatePrinting.h",
+      "bytes": 781,
+      "sha256": "ba20d9d82ffac87088608fb83a7fc987b54aad9cf56ff815168dbec71e3f5fef"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateSettings.cpp",
+      "bytes": 10940,
+      "sha256": "27ac59f0827f54f8e54dc485c77a4893dcbaa45e992942632a31c07a043edf0c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateSettings.h",
+      "bytes": 1111,
+      "sha256": "1bca84824f0a45823bebd700818c7ca2d95d7674606f5fb47fd0b40a6d4d0186"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateStatus.cpp",
+      "bytes": 5432,
+      "sha256": "bd374d4535696a6802328c7dbd68d4f02e19da2d5a5a96b853af3179db84c8ff"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateStatus.h",
+      "bytes": 601,
+      "sha256": "c754d85666f87205053b36f56d77f4715caecc7f456a530bc1524f57203a67fc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateTemperature.cpp",
+      "bytes": 3703,
+      "sha256": "1de630da1b1530123f4f4e7a684278fc0398643f104e5ea25dfe495349c5f65d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateTemperature.h",
+      "bytes": 630,
+      "sha256": "86393c0d0c16dc4d6ff2d9073ce12b94716439b01c03b5b4f1471b37ef7447d2"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateWifiList.cpp",
+      "bytes": 7356,
+      "sha256": "17d7c8c301030d979e1614bc4a1310aaf946371918fcc73b6f19fbe2e12a8275"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateWifiList.h",
+      "bytes": 506,
+      "sha256": "181f4ce41522f000c454b236f9f7ada15f8ff6bb68052e63d8268784a1c1a9dd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateWizard.cpp",
+      "bytes": 29846,
+      "sha256": "05e660a69e6e8bef157c7c88c8cc3cb055634903175322dfaaa80db9b671aa25"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateWizard.h",
+      "bytes": 3325,
+      "sha256": "b7edb67457280764961a029f66bd809cb31e3e4dbd39af9c4f3db0a956c1e16b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateWizardZ.cpp",
+      "bytes": 7270,
+      "sha256": "1d0e4ce8f182dcf7e1357834b74969bb213fc27642d69a4fad767768bb47d4cb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/nextion_hmi/StateWizardZ.h",
+      "bytes": 800,
+      "sha256": "bed56f4f076c78fcdb5b56a00baf9dfb0b9f005e51279bd90c4a6a8770f3c7ab"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/sanitycheck.h",
+      "bytes": 8281,
+      "sha256": "ba7c1f85e799fafe05f2fd647f4e412d263d4f389de2816418c50aa53ccd515d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/u8g_fontutf8.cpp",
+      "bytes": 11962,
+      "sha256": "49695b0291f2cef65d4f318c886e5f03e268f1325deeacd587d9c228d495f45d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/u8g_fontutf8.h",
+      "bytes": 1529,
+      "sha256": "276ea4a3b93e5e6190ddd1a18e71732f934f16133caeb92fe76eba958cf2e896"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/ultralcd.cpp",
+      "bytes": 209953,
+      "sha256": "a7a139e76a7947acda6afef4bc421b38e5f73de7d74d5985adcba004ce654bb6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/ultralcd.h",
+      "bytes": 9757,
+      "sha256": "8f3e91879251f39dc79c914fe7d6d8bf3613d5bb10e6a54e0d88cc07d073e6bc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/ultralcd_common_HD44780.h",
+      "bytes": 6849,
+      "sha256": "e925830e76d059a2b60f32f1b87125f30271f59ea22710064f44c2522c039438"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/ultralcd_impl_DOGM.h",
+      "bytes": 25530,
+      "sha256": "1351d2e15e05d461efba883a921362ed0ad2c401867c55b88d3240bf9bc4ee17"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lcd/ultralcd_impl_HD44780.h",
+      "bytes": 48786,
+      "sha256": "e28e28813542feba0d11546c1545712771bc88b83d0f8559d92a32b548aa7bd6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/circular_queue.h",
+      "bytes": 2848,
+      "sha256": "ca3e5b35ee6176f710d141b483f22140cc100da816ca414acf046e1bab51c85b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/conditionals_post.h",
+      "bytes": 53063,
+      "sha256": "0d383a063733c48d8b24e2b00989092eac443a061604ad016ff506d2fecdf786"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/conditionals_pre.h",
+      "bytes": 15928,
+      "sha256": "e0aa0983ab7a3d8ac89bf586cac682af148d6f6ae72b89dba568ab36b7cb144e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/enum.h",
+      "bytes": 959,
+      "sha256": "d3328a28b7a0aafbb1ebf99fabc724f88448f1e675b64db9263a9c8e9fdfb021"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/macros.h",
+      "bytes": 9478,
+      "sha256": "5d0f0de4a904bf76e8c2f985892652dbd9abea6d55f04ff21012e4b5473d7f40"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/pins.h",
+      "bytes": 9497,
+      "sha256": "b3080a76437f5eb8d94610ada079df37a893ab450002712efd36a77687e068a4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/point_t.h",
+      "bytes": 1837,
+      "sha256": "26360528ff7b817d4ab7765ac3a5a85f538676fb63425c2fb68baab78496a20d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/print_file_info.h",
+      "bytes": 315,
+      "sha256": "04392cc59f7ce99cdef9f0584d831a20e5442226c3cf76280d85723e091a5699"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/sanitycheck.h",
+      "bytes": 4908,
+      "sha256": "b5d2f241e838b437a63dcc9e457afc9deda5d4849c17354279774365b894b3bd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/timer.h",
+      "bytes": 2573,
+      "sha256": "3786925b67a8863adc1f0025fa271ab5e53abd221b4689e350a227c044467229"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/lib/watch.h",
+      "bytes": 1664,
+      "sha256": "857054818d2514cfd0cde847d3f89c79723549ad246c3a71823b5d0ece7513f6"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/network-bridge/NetBridgeManager.cpp",
+      "bytes": 17083,
+      "sha256": "5bee7a713f909f1e56e4927792ce18c5f32c250c22d933bbe72ceb720b553d6c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/network-bridge/NetBridgeManager.h",
+      "bytes": 4222,
+      "sha256": "63178594794d4f4399a040ba104d843eea48a78dd816878ea7d7e89a2a372c96"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/network-bridge/sanitycheck.h",
+      "bytes": 422,
+      "sha256": "747a52698755b5c1b7f71b26513caa544505ea134ff648cf58e6e7d9d73121df"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/common/communication/communication.cpp",
+      "bytes": 4578,
+      "sha256": "56a79dcf1f54ac9b6e2a3c1c1af625826507a7ae42f0d03e2c3c49e5084bc5be"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/common/communication/communication.h",
+      "bytes": 7995,
+      "sha256": "33cc1b8b2408bf71db3ac5b06acd66ec75b387b7cf25bdfb10b853e71f02a90f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/delay.h",
+      "bytes": 3436,
+      "sha256": "f1d836077c60c42bd4b802ae5c713e34a0620f81a044f9f1055c6d772b43bfab"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/endstop_interrupts.h",
+      "bytes": 8644,
+      "sha256": "ec66ffe5ada7129038de9e32828791be59d3a53f6d60da0767b599b51bd3fd7f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/fastio.h",
+      "bytes": 102637,
+      "sha256": "1deab792b732b5d40c4914f8e12ba0b2a6d476fd63f9c2d1c52d21255e209874"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_AVR.cpp",
+      "bytes": 12020,
+      "sha256": "46d6bf4df084ee86c5468f6c5cb96a5eb335c8327f92f7220bab1046523cc8a4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_AVR.h",
+      "bytes": 16641,
+      "sha256": "7f9135761081da6ecc1c9169213427cba7eae37d67559e2d477bd39d3611a96a"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_eeprom_AVR.cpp",
+      "bytes": 2983,
+      "sha256": "3c989025474ed1c9b0c01bd66fb372a18ad01246c0e20286c0d6ffbea51227dc"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_pinsdebug_AVR.h",
+      "bytes": 12972,
+      "sha256": "68c9a9523a8bb6432b54a62e8267c5b5dce2ac88b69bef52ca3e50aebd539dcb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_servotimers_AVR.h",
+      "bytes": 2990,
+      "sha256": "e36ee8270d5a40e1aa80cf5f79637454d5e8d1600f0b7a7f26dcbe6fb26b60d8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_spi_AVR.cpp",
+      "bytes": 5029,
+      "sha256": "418c7ff24234ae26221498f367c68dbff5e8ff45507456aac9bf1ad4119798fb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_watchdog_AVR.cpp",
+      "bytes": 2366,
+      "sha256": "bf9918aa92395e2ee41dcf06849996185d6fe37929f9367e969c81146a8ef407"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HAL_watchdog_AVR.h",
+      "bytes": 1319,
+      "sha256": "3ee6c69b02b6dcac175420f97b2cefbf73f8f255c310ae8bbd07e6ed21e4f378"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HardwareSerial.cpp",
+      "bytes": 20515,
+      "sha256": "4b39b4393321f1c01f901fa6d724d48e2549251baf15240733c142b5137f1973"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/HardwareSerial.h",
+      "bytes": 7713,
+      "sha256": "f3a1e40194bc9aa33b0eeec304fc405e93b4621fd79be52ab651d55c68d4c150"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_AVR/spi_pins_AVR.h",
+      "bytes": 2182,
+      "sha256": "fe53afbf8f4aea3dc838b56359a81a4d071fa6a2d8ae9c43834b2c3ee3110350"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/delay.h",
+      "bytes": 2027,
+      "sha256": "d7310db0e7c225b6954578195c9ac3bb15e5ce9845be2efa9a1e55229e94829c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/endstop_interrupts.h",
+      "bytes": 2677,
+      "sha256": "60fe1349f58475058a2eede60965c443389ee407ed32fd5800d19e14f3f19091"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/fastio_Due.h",
+      "bytes": 7368,
+      "sha256": "352866ef7b732b6edf894fcbbccb4f034058b14b3b20fa003a2dcfe9a0c6d751"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_Due.cpp",
+      "bytes": 19953,
+      "sha256": "c0d2491cb2c1c841028d8a1a3f3f5f631bb50f37d39ebcc81657614d19333b30"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_Due.h",
+      "bytes": 14058,
+      "sha256": "7df895fe8bcad013b4d5bbf660bc0848c7f38f2fa48349eaf58973e1b47633e4"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_eeprom_Due.cpp",
+      "bytes": 2992,
+      "sha256": "4236d009fa37e66e0303c98437fd5da3bffb50ab84ce5f87097adbca77caa013"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_eeprom_flash.cpp",
+      "bytes": 36656,
+      "sha256": "e5faa44ab416100a2ec5d237826945a6910c2e35968a4aa3eb5fcb0b001d09dd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_pinsdebug_Due.h",
+      "bytes": 4068,
+      "sha256": "3c600223992bfa076ba4cd487c45af91b932c7873abdf3975c35c3a5b256716c"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_servotimers_Due.h",
+      "bytes": 3793,
+      "sha256": "0ef3067e72e04378ba14e2ce4db9ae3345b1c2a4cbd06b20540f680ee07fadd5"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_spi_Due.cpp",
+      "bytes": 9389,
+      "sha256": "be4d6ad4b096c8ecc8ca81872b712bdeaea186136a6301a9bc9d58f1ee088d2e"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_timers_Due.cpp",
+      "bytes": 6175,
+      "sha256": "279e35ee8e9cca6e12f2968f67a817cb4e799cd2f8c14b672d7d55e3959f8e0d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_timers_Due.h",
+      "bytes": 8194,
+      "sha256": "5c530a85cb9945c378d57be981962fad70f4e91f2b0734072217a10908aaeaed"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_watchdog_Due.cpp",
+      "bytes": 3688,
+      "sha256": "b1801745783286acdf7494982065111f8b78449ce1bb78eda0f8eb2bdfc78d32"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/HAL_watchdog_Due.h",
+      "bytes": 1343,
+      "sha256": "b07289c03254f1d7d423a4808c0fbc9eecfd6e0271fc48e1e434469f0df364de"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/spi_pins_Due.h",
+      "bytes": 2163,
+      "sha256": "17ac14c947d3062002e1f2640ca2284789507f8b4219d0029b42ba97494e1b5b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_DUE/u8g_com_HAL_DUE_st7920_sw_spi.cpp",
+      "bytes": 6999,
+      "sha256": "a05071f25362d63aa37fb398f599bc93722e31be6675ad70570fe8124b04da8f"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_endstop_interrupts.h",
+      "bytes": 1504,
+      "sha256": "a0dea40f936db34b22b972afb91b85680dd348661e58af919715d06da867d183"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_pinsdebug.h",
+      "bytes": 1157,
+      "sha256": "203332781ec0a90c6a019b8ae21b6aa8635782882637445457ce9d9b09d834e8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/HAL_servotimers.h",
+      "bytes": 1167,
+      "sha256": "8e0c08c16c28a3d20644c4a8846f37367b578b92b10f44747726935596f63f97"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/I2cEeprom.cpp",
+      "bytes": 5580,
+      "sha256": "dc9ba08c5d715ef7eb37f2e14ea11e7ec0261603d9534a66f0907f3611f42a98"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/platform.h",
+      "bytes": 1418,
+      "sha256": "0b5e96435026a5a7bf4db41c881dfc020452dac721b1ec8226de27ac5e7eccfd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/platform/SpiEeprom.cpp",
+      "bytes": 3868,
+      "sha256": "3d9df50ccfc1ab22b24b2e3b28589c43135d1fd6c2eb9679d2eb9bd845d50597"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/sd/sanitycheck.h",
+      "bytes": 2027,
+      "sha256": "7dbb663ac2ba5b4636b2cebba5e248de8e683223d4a69bc0f1013b7804149b08"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/sd/sdcard.cpp",
+      "bytes": 48357,
+      "sha256": "f7accdfbaa039392874edc5defe1bd1762565c02f4c564ad099bf61cf0687b78"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/sd/sdcard.h",
+      "bytes": 12429,
+      "sha256": "89d176d85a173515ede51342f357747eaa1b3987ddbd7e94c5efd434d92d4395"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/sd/sdstorage.cpp",
+      "bytes": 6967,
+      "sha256": "ddd329f274c8fbde1e9ad5e347e68b742acd05c4d42ce8b6cbe9b4e94e09c8b8"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/sd/sdstorage.h",
+      "bytes": 2495,
+      "sha256": "7f0d915543b39a6268745cea27ba38850dd5b915bebaa8c3ada6d30d4a732521"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/bezier.cpp",
+      "bytes": 6766,
+      "sha256": "0765a3a8e7b01f2b723c3685d7805f1f3182248fd6523e29ba003a1603518e96"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/bezier.h",
+      "bytes": 2458,
+      "sha256": "abcf469052d9c50536261ba6dd98810677cfc965e1defc7f5a21f86e4e58d68d"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/digipot_mcp4451.cpp",
+      "bytes": 2316,
+      "sha256": "ace93c9307d1c858e2394bdf2da82a3694ad126d08ff8a2dc28e16eb953f44b9"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/digipot_mcp4451.h",
+      "bytes": 1439,
+      "sha256": "4aed6c859810471a82dbf29596e90be4086aaedfb22bec50137494ef2344640b"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/hex_print_routines.cpp",
+      "bytes": 2569,
+      "sha256": "0eb38f27b062328311600a94227c3bb875e0ca03926b813dde0062c2f3a4fbe7"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/hex_print_routines.h",
+      "bytes": 1597,
+      "sha256": "465d7725cff21ee7b32df8dcf64d4b1ddc15dd470be9bbb85e0d80748f6acdfd"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/pinsdebug.h",
+      "bytes": 8807,
+      "sha256": "cd1b856d034474ab671973c260e76f8de83473e4886d4e424130a101a0ad2ceb"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/pinsdebug_list.h",
+      "bytes": 25977,
+      "sha256": "8fa0063c202cee36966c697fb33265547df0b30b9942175f0c9fd2f85f694569"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/utility.cpp",
+      "bytes": 7413,
+      "sha256": "be8e533ca4afa4db4f52dd8ff45834fc64368b17899be0ced02507a6f9d4c908"
+    },
+    {
+      "arquivo": "firmwares/MKA-firmware/src/utility/utility.h",
+      "bytes": 3690,
+      "sha256": "e53234a21861c352c119bcf445911a67bc17b2838203288fb34b0d87cb4dcb26"
+    },
+    {
       "arquivo": "firmwares/README.md",
-      "bytes": 1362,
-      "sha256": "eb54ccbfd6515d6212b539bb73ee35d06bdb3a436c8c5ea997d756311672b355"
+      "bytes": 1499,
+      "sha256": "60c80d167a8f6175171ffb99420fa39e74455e2679ccc1206bd8bc9d3c8824d9"
     },
     {
       "arquivo": "gravador/.gitattributes",
@@ -8336,8 +11641,8 @@
     },
     {
       "arquivo": "README.md",
-      "bytes": 7235,
-      "sha256": "ec3d717197089b7553af0e2156eea01e9b0d9aebf0aa0e08d09ce1e05383d87e"
+      "bytes": 7249,
+      "sha256": "1f264bb2c51a761d6541553d8edcad8378eef51954d83745f71a5db297fa4d21"
     },
     {
       "arquivo": "referencias/datasheets/Atmel-11057-32-bit-Cortex-M3-Microcontroller-SAM3X-SAM3A_Datasheet-ATSAM3X8E.pdf",

@@ -23,7 +23,7 @@
 | Mapas/manifestos | `gravador/imagens/` — JSON, CSV e SHA-256 |
 | Instruções de reprodução | `gravador/REPRODUZIR.md` |
 
-O fonte MKA está incluído uma única vez nesse caminho para preservar o funcionamento do gerador e seus testes. Não há submódulo a baixar. O perfil tem também uma cópia dentro do pacote original do Flasher; os bytes foram conferidos entre as duas cópias.
+O fonte MKA está disponível diretamente em `firmwares/MKA-firmware/` e também no caminho das dependências acima, para preservar o funcionamento do gerador e seus testes. Os 661 arquivos das duas cópias foram comparados por SHA-256 e são idênticos. Não há submódulo a baixar. O perfil tem também uma cópia dentro do pacote original do Flasher; os bytes foram conferidos entre as duas cópias.
 
 ## Firmwares e ferramentas históricos
 

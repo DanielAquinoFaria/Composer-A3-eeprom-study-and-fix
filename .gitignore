@@ -21,6 +21,3 @@ Thumbs.db
 *.key
 # Backups novos devem ser revisados antes da publicação.
 /backups-locais/
-# Cópia local idêntica ao snapshot versionado em gravador/dependencies/.
-# Preserva seu histórico Git independente sem criar um submódulo acidental.
-/firmwares/MKA-firmware/

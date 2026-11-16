@@ -3,7 +3,7 @@
 Esta pasta preserva os pacotes usados como referência durante a investigação. **A solução confirmada usa o BIN de configuração da EEPROM em `../gravador/imagens/`, não os executáveis desta pasta.**
 
 - [Composer Flasher](Composer%20Flasher/): pacote local completo, com aplicação Windows, bossac, dependências distribuídas e pacotes Composer A3/A4.
-- [Fonte MKA usado na reconstrução](../gravador/dependencies/firmwares/firmware%20codigo%20fonte/MKA-firmware/): incluído nas dependências do gerador para manter os caminhos reproduzíveis.
+- [MKA-firmware](MKA-firmware/): código-fonte completo, configurações, perfis e licença do MKA usado como referência na reconstrução. A [cópia nas dependências do gravador](../gravador/dependencies/firmwares/firmware%20codigo%20fonte/MKA-firmware/) também foi mantida para preservar os caminhos do gerador e seus testes.
 - [MK4duo](MK4duo/): snapshot histórico da base de firmware; não foi compilado/instalado como parte da recuperação.
 - [Inventário e hashes](../docs/INVENTARIO.md): versões e identificação dos principais binários.
 

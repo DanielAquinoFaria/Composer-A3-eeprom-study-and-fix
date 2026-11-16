@@ -65,7 +65,7 @@ O firmware é carregado pelo Arduino IDE a partir de `gravador/firmware/eeprom_u
 RELATORIO.md             Relatório final, com referências às evidências
 docs/                    Recuperação, inventário, validação e publicação
 gravador/                Projeto completo, imagem final, dumps e fonte MKA
-firmwares/               Composer Flasher completo e snapshot MK4duo
+firmwares/               MKA-firmware, Composer Flasher completo e snapshot MK4duo
 evidencias/              Logs, diagnósticos históricos e leitor ESP32-C3
 referencias/             Datasheets e guia de flashing recebido
 tools/verificar_pacote.py Verificação de integridade sem hardware
