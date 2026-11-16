@@ -1,0 +1,20 @@
+[
+  {
+    "arquivo": "EEPROM_Recovery_Report_Composer_A3_EN.pdf",
+    "paginas": 9,
+    "marcadores": 8,
+    "idioma": "en-US",
+    "bytes": 108967,
+    "sha256": "d655eba3777ae184a11550c6a0e520f2fbb6b47ec9021abdc4d12a426e6fdd03",
+    "verificacoes": "Estrutura PDF, texto extraivel, valores criticos, limites de pagina e numeracao aprovados."
+  },
+  {
+    "arquivo": "Relatorio_Recuperacao_EEPROM_Composer_A3_PT-BR.pdf",
+    "paginas": 9,
+    "marcadores": 8,
+    "idioma": "pt-BR",
+    "bytes": 112377,
+    "sha256": "82fb431089b361ddd2211d2b3a92a14034cd38d71f6f75eaecf5dc33a3fa98ce",
+    "verificacoes": "Estrutura PDF, texto extraivel, valores criticos, limites de pagina e numeracao aprovados."
+  }
+]

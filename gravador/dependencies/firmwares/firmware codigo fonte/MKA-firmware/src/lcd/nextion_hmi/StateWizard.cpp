@@ -1,0 +1,1050 @@
+/*
+ * StateWizard.cpp
+ *
+ *  Created on: 26 θών. 2018 γ.
+ *      Author: Azarov
+ */
+
+
+#include "../../../MK4duo.h"
+
+#if ENABLED(NEXTION_HMI)
+
+#define BUTTONS(n) 					NextionHMI::ActivateState(PAGE_WIZARD);_buttonsNum.setValue(n);
+#define NO_PICTURE 					_pic.setValue(0);
+
+#define CAPTION(n) 					_text.setTextPGM(PSTR(n));
+#define HEADER(str, stage, icon) 	if (stage!="") {_head.setTextPGM(PSTR(str ": " stage));} else {_head.setTextPGM(PSTR(str));} _page.show(); NextionHMI::headerText.setTextPGM(PSTR(str)); NextionHMI::headerIcon.setPic(icon);
+
+#define HEADER_LOAD_UNLOAD(str, stage, icon) 		switch (NextionHMI::wizardData) { \
+														case E_AXIS: \
+															HEADER(MSG_PLASTIC str, stage, icon); \
+															break; \
+														case U_AXIS: \
+															HEADER(MSG_COMP_FIBER str, stage, icon); \
+															break; \
+														case V_AXIS: \
+															HEADER(MSG_COMP_PLASTIC str, stage, icon); \
+															break; \
+													}
+
+#include "StateWizard.h"
+
+namespace {
+	///////////// Nextion components //////////
+	//Page
+	NexObject _page = NexObject(PAGE_WIZARD,  0,  "wizard");
+
+	//Variables
+	NexObject _head = NexObject(PAGE_WIZARD,  14,  "wizard.h");
+	NexObject _pic  = NexObject(PAGE_WIZARD,  23,   "wizard.pic");
+	NexObject _text = NexObject(PAGE_WIZARD,  12,  "wizard.text");
+	NexObject _buttonsNum = NexObject(PAGE_WIZARD,  15,  "wizard.bn");
+
+	//Buttons
+	NexObject _bL = NexObject(PAGE_WIZARD,  10,   "bL");
+	NexObject _bR = NexObject(PAGE_WIZARD,  2,  "bR");
+	NexObject _bC = NexObject(PAGE_WIZARD,  16,   "bC");
+
+	NexObject *_listenList[] = { &_bL, &_bR, &_bC, NULL };
+
+	NexTouchEventCb DrawUpdateCallback = 0;
+
+	bool _loopStopped = false;
+	bool _wizardCancelled = false;
+
+	inline void SetHeaderLoad(const char* stageNum)
+	{
+
+	}
+}
+
+inline void StateWizard::Init1Button(const char* txtCenter, NexTouchEventCb cbCenter) {
+	_bC.setTextPGM(txtCenter);
+	_bC.attachPush(cbCenter);
+}
+
+inline void StateWizard::Init2Buttons(const char* txtLeft, NexTouchEventCb cbLeft,
+		const char* txtRight, NexTouchEventCb cbRight) {
+
+	_bL.setTextPGM(txtLeft);
+	_bR.setTextPGM(txtRight);
+
+	_bL.attachPush(cbLeft);
+	_bR.attachPush(cbRight);
+}
+
+void StateWizard::TouchUpdate() {
+	nexLoop(_listenList);
+}
+
+void StateWizard::CompZOffsetS1(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		printer.setBusyIfIdle();
+		_wizardCancelled = false;
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_COMP_Z_OFFSET_ST1)
+		HEADER(MSG_HEADER_COMP_Z_OFFSET, "1/4", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), CompZOffsetCancel, PSTR(MSG_NEXT), CompZOffsetS2);
+
+
+		//Homing if not homed
+		if (mechanics.axis_unhomed_error())
+		{
+			mechanics.home(true, true, true);
+		}
+		else
+		{
+			mechanics.home(false, false, true);
+		}
+
+		//Changing tool
+		if (tools.active_extruder!=1)
+		{
+			tools.change(1, 0, false, false);
+		}
+	}
+
+}
+
+void StateWizard::CompZOffsetS2(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		printer.setBusyIfIdle();
+
+		_wizardCancelled = false;
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_COMP_Z_OFFSET_ST2)
+		HEADER(MSG_HEADER_COMP_Z_OFFSET, "2/4", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), CompZOffsetCancel, PSTR(MSG_NEXT), StateWizard::CompZOffsetS2a);
+
+	}
+}
+
+//Calibration 2a - display set temperature screen
+void StateWizard::CompZOffsetS2a(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		StateTemperature::Activate(BED_INDEX, CompZOffsetS3, CompZOffsetCancel);
+	}
+}
+
+//Calibration 3 - Wait for temperature to reach target
+void StateWizard::CompZOffsetS3(void* ptr) {
+	BUTTONS(1)
+	NO_PICTURE
+	HEADER(MSG_HEADER_COMP_Z_OFFSET, "3/4", NEX_ICON_MAINTENANCE);
+	CompZOffsetS3DrawUpdate();
+	Init1Button(PSTR(MSG_CANCEL), CompZOffsetCancel);
+
+    heaters[BED_INDEX].reset_idle_timer();
+
+	//to update temperature value
+	DrawUpdateCallback = CompZOffsetS3DrawUpdate;
+
+	Temperature::wait_heater(&heaters[BED_INDEX]);
+
+    DrawUpdateCallback = NULL;
+
+    if (!_wizardCancelled) {
+    	StateWizardZ::CompZOffsetS4();
+    }
+
+}
+
+void StateWizard::CompZOffsetS3DrawUpdate(void *ptr) {
+	ZERO(NextionHMI::buffer);
+	sprintf_P(NextionHMI::buffer, PSTR(MSG_BP_CALIBR_ST3), (int)heaters[BED_INDEX].current_temperature, (int)heaters[BED_INDEX].target_temperature);
+	_text.setText(NextionHMI::buffer);
+}
+
+void StateWizard::CompZOffsetFinish(void* ptr) {
+	if (!planner.movesplanned())
+	{
+
+		BUTTONS(0)
+		NO_PICTURE
+		CAPTION(MSG_PLEASE_WAIT)
+		HEADER(MSG_HEADER_COMP_Z_OFFSET, "", NEX_ICON_MAINTENANCE);
+
+		float dz = mechanics.current_position[Z_AXIS]-LEVELING_OFFSET;
+		tools.hotend_offset[Z_AXIS][1] = tools.hotend_offset[Z_AXIS][1] - dz;
+		eeprom.Store_Settings();
+
+		heaters[BED_INDEX].setTarget(0);
+		heaters[BED_INDEX].reset_idle_timer();
+
+		mechanics.home(true, true, true);
+		printer.setIdleIfBusy();
+		StateMenu::ActivateCalibrate();
+	}
+}
+
+void StateWizard::CompZOffsetCancel(void* ptr) {
+	if (!planner.movesplanned())
+	{
+	    DrawUpdateCallback = NULL;
+
+		BUTTONS(0)
+		NO_PICTURE
+		CAPTION(MSG_PLEASE_WAIT)
+		HEADER(MSG_HEADER_COMP_Z_OFFSET, "", NEX_ICON_MAINTENANCE);
+
+		_wizardCancelled = true;
+		printer.setWaitForHeatUp(false);
+		heaters[BED_INDEX].setTarget(0);
+		heaters[BED_INDEX].reset_idle_timer();
+
+		mechanics.home(true, true, true);
+		printer.setIdleIfBusy();
+		StateMenu::ActivateCalibrate();
+	}
+}
+
+
+void StateWizard::ZAxisS1(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		printer.setBusyIfIdle();
+		_wizardCancelled = false;
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_Z_OFFSET_ST1)
+		HEADER(MSG_HEADER_Z_OFFSET, "1/4", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), ZAxisCancel, PSTR(MSG_NEXT), ZAxisS2);
+
+		//Homing if not homed
+		if (mechanics.axis_unhomed_error())
+		{
+			mechanics.home(true, true, true);
+		}
+		else
+		{
+			mechanics.home(false, false, true);
+		}
+
+		//Changing tool
+		if (tools.active_extruder!=0)
+		{
+			tools.change(0, 0, false, false);
+		}
+
+	}
+}
+
+
+void StateWizard::ZAxisS2(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		printer.setBusyIfIdle();
+
+		_wizardCancelled = false;
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_Z_OFFSET_ST2)
+		HEADER(MSG_HEADER_Z_OFFSET, "2/4", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), ZAxisCancel, PSTR(MSG_NEXT), StateWizard::ZAxisS2a);
+
+	}
+}
+
+//Calibration 2a - display set temperature screen
+void StateWizard::ZAxisS2a(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		StateTemperature::Activate(BED_INDEX, ZAxisS3, ZAxisCancel);
+	}
+}
+
+//Calibration 3 - Wait for temperature to reach target
+void StateWizard::ZAxisS3(void* ptr) {
+	BUTTONS(1)
+	NO_PICTURE
+	HEADER(MSG_HEADER_Z_OFFSET, "3/4", NEX_ICON_MAINTENANCE);
+	ZAxisS3DrawUpdate();
+	Init1Button(PSTR(MSG_CANCEL), ZAxisCancel);
+
+    heaters[BED_INDEX].reset_idle_timer();
+
+	//to update temperature value
+	DrawUpdateCallback = ZAxisS3DrawUpdate;
+
+	Temperature::wait_heater(&heaters[BED_INDEX]);
+
+    DrawUpdateCallback = NULL;
+
+    if (!_wizardCancelled) {
+    	StateWizardZ::ZOffsetS4();
+    }
+
+}
+
+void StateWizard::ZAxisS3DrawUpdate(void *ptr) {
+	ZERO(NextionHMI::buffer);
+	sprintf_P(NextionHMI::buffer, PSTR(MSG_BP_CALIBR_ST3), (int)heaters[BED_INDEX].current_temperature, (int)heaters[BED_INDEX].target_temperature);
+	_text.setText(NextionHMI::buffer);
+}
+
+void StateWizard::ZAxisFinish(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		BUTTONS(0)
+		NO_PICTURE
+		CAPTION(MSG_PLEASE_WAIT)
+		HEADER(MSG_HEADER_Z_OFFSET, "", NEX_ICON_MAINTENANCE);
+
+		float dz = mechanics.current_position[Z_AXIS]-LEVELING_OFFSET;
+		mechanics.set_home_offset(Z_AXIS, mechanics.home_offset[Z_AXIS] - dz);
+		eeprom.Store_Settings();
+
+		heaters[BED_INDEX].setTarget(0);
+		heaters[BED_INDEX].reset_idle_timer();
+
+		mechanics.home(true, true, true);
+		printer.setIdleIfBusy();
+		StateMenu::ActivateCalibrate();
+	}
+
+}
+
+void StateWizard::ZAxisCancel(void* ptr) {
+	if (!planner.movesplanned())
+	{
+	    DrawUpdateCallback = NULL;
+
+		BUTTONS(0)
+		NO_PICTURE
+		CAPTION(MSG_PLEASE_WAIT)
+		HEADER(MSG_HEADER_Z_OFFSET, "", NEX_ICON_MAINTENANCE);
+
+		_wizardCancelled = true;
+		printer.setWaitForHeatUp(false);
+		heaters[BED_INDEX].setTarget(0);
+		heaters[BED_INDEX].reset_idle_timer();
+
+		mechanics.home(true, true, true);
+		printer.setIdleIfBusy();
+		StateMenu::ActivateCalibrate();
+	}
+}
+
+
+//UNLOAD 1 - Home if needed, move to change position, display info about printhead heating
+void StateWizard::MaterialUnloadS1(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		_wizardCancelled = false;
+		printer.setBusyIfIdle();
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_UNLOAD_MATERIAL_ST1)
+		HEADER_LOAD_UNLOAD(MSG_HEADER_UNLOAD_MATERIAL, "1/4", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), MaterialUnloadCancel, PSTR(MSG_NEXT), MaterialUnloadS1a);
+
+		if (printer.getStatus()!=Paused)
+		{
+			//Homing if not homed
+			if (mechanics.axis_unhomed_error())
+			{
+				mechanics.home(true, true, true);
+			}
+			else
+			{
+				mechanics.home(false, false, true);
+			}
+		}
+		else
+		{
+			const uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+			const millis_l nozzle_timeout = (millis_l)(PAUSE_PARK_NOZZLE_TIMEOUT) * 1000UL;
+			heaters[heater].start_idle_timer(nozzle_timeout);
+		}
+
+		// Move XY to park position
+	    const point_t park_point = NOZZLE_PARK_POINT;
+		Nozzle::park(3, park_point);
+
+		//Changing tool
+		const uint8_t extruder_id = Tools::extruder_driver_to_extruder(NextionHMI::wizardData - E_AXIS);
+		if (extruder_id!=tools.active_extruder) tools.change(extruder_id, 0, false, false);
+	}
+}
+
+//UNLOAD 1a - display set temperature screen
+void StateWizard::MaterialUnloadS1a(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		const uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+		StateTemperature::Activate(heater, MaterialUnloadS2, MaterialUnloadCancel);
+	}
+}
+
+//UNLOAD 2 - Wait for temperature to reach target
+void StateWizard::MaterialUnloadS2(void* ptr) {
+	BUTTONS(1)
+	NO_PICTURE
+	HEADER_LOAD_UNLOAD(MSG_HEADER_UNLOAD_MATERIAL, "2/4", NEX_ICON_MAINTENANCE);
+	MaterialUnloadS2DrawUpdate();
+	Init1Button(PSTR(MSG_CANCEL), MaterialUnloadCancel);
+
+	const uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+    heaters[heater].reset_idle_timer();
+
+	//to update temperature value
+	DrawUpdateCallback = MaterialUnloadS2DrawUpdate;
+
+	Temperature::wait_heater(&heaters[heater]);
+
+    DrawUpdateCallback = NULL;
+
+    if (!_wizardCancelled)
+		{
+		if (thermalManager.tooColdToExtrude(heater))
+			MaterialUnloadS2a();
+		else
+		{
+			MaterialUnloadS3();
+		}
+    }
+
+
+}
+
+void StateWizard::MaterialUnloadS2DrawUpdate(void *ptr) {
+	uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+	ZERO(NextionHMI::buffer);
+	sprintf_P(NextionHMI::buffer, PSTR(MSG_UNLOAD_MATERIAL_ST2), (int)heaters[heater].current_temperature, (int)heaters[heater].target_temperature);
+	_text.setText(NextionHMI::buffer);
+}
+
+//UNLOAD 2a - Display error if temperature is too low
+void StateWizard::MaterialUnloadS2a(void* ptr) {
+	BUTTONS(2)
+	NO_PICTURE
+	CAPTION(MSG_UNLOAD_MATERIAL_ST2A)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_UNLOAD_MATERIAL, "2/4", NEX_ICON_MAINTENANCE);
+
+	Init2Buttons(PSTR(MSG_CANCEL), MaterialUnloadCancel, PSTR(MSG_NEXT), MaterialUnloadS1a);
+}
+
+
+//UNLOAD 3 - Unload material
+void StateWizard::MaterialUnloadS3(void* ptr) {
+	BUTTONS(0)
+	NO_PICTURE
+	CAPTION(MSG_UNLOAD_MATERIAL_ST3)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_UNLOAD_MATERIAL, "3/4", NEX_ICON_MAINTENANCE);
+
+	if (Tools::extruder_driver_is_plastic((AxisEnum)NextionHMI::wizardData)) //Unload plastic
+	{
+	    // Push filament
+		PrintPause::DoPauseExtruderMove((AxisEnum)NextionHMI::wizardData, PrintPause::RetractDistance*2.5, PrintPause::RetractFeedrate);
+		printer.safe_delay(FILAMENT_UNLOAD_DELAY);
+	}
+
+    // Unload filament
+	PrintPause::DoPauseExtruderMove((AxisEnum)NextionHMI::wizardData, -PrintPause::UnloadDistance[NextionHMI::wizardData-E_AXIS], PrintPause::UnloadFeedrate);
+
+    MaterialUnloadS4();
+}
+
+//UNLOAD 3 - Display finish message
+void StateWizard::MaterialUnloadS4(void* ptr) {
+	BUTTONS(1)
+	NO_PICTURE
+	CAPTION(MSG_UNLOAD_MATERIAL_ST4)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_UNLOAD_MATERIAL, "4/4", NEX_ICON_MAINTENANCE);
+
+	const uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+    const millis_l nozzle_timeout = (millis_l)(PAUSE_PARK_NOZZLE_TIMEOUT) * 1000UL;
+    heaters[heater].start_idle_timer(nozzle_timeout);
+
+	Init1Button(PSTR(MSG_FINISH), MaterialUnloadFinish);
+}
+
+void StateWizard::MaterialUnloadFinish(void* ptr) {
+
+	BUTTONS(0)
+	NO_PICTURE
+	CAPTION(MSG_PLEASE_WAIT)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_UNLOAD_MATERIAL, "", NEX_ICON_MAINTENANCE);
+
+	uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+
+	if (printer.getStatus()==Paused)
+	{
+		PrintPause::RestoreTemperatures();
+
+	    const millis_l nozzle_timeout = (millis_l)(PAUSE_PARK_NOZZLE_TIMEOUT) * 1000UL;
+	    heaters[heater].start_idle_timer(nozzle_timeout);
+	}
+	else
+	{
+		heaters[heater].setTarget(0);
+		heaters[heater].reset_idle_timer();
+	}
+
+	// Move XY to park position
+    const point_t park_point = NOZZLE_PARK_POINT;
+	Nozzle::park(3, park_point);
+
+	printer.setIdleIfBusy();
+	StateMenu::ActivateLoadUnload();
+}
+
+void StateWizard::MaterialUnloadCancel(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		_wizardCancelled = true;
+		printer.setWaitForHeatUp(false);
+		MaterialUnloadFinish();
+	}
+}
+
+
+void StateWizard::MaterialLoadS1(void* ptr) {
+	_wizardCancelled = false;
+	printer.setBusyIfIdle();
+
+	BUTTONS(2)
+	NO_PICTURE
+	CAPTION(MSG_LOAD_MATERIAL_ST1)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "1/6", NEX_ICON_MAINTENANCE);
+
+	Init2Buttons(PSTR(MSG_CANCEL), MaterialLoadCancel, PSTR(MSG_NEXT), MaterialLoadS1a);
+
+	if (printer.getStatus()!=Paused)
+	{
+		//Homing if not homed
+		if (mechanics.axis_unhomed_error())
+		{
+			mechanics.home(true, true, true);
+		}
+		else
+		{
+			mechanics.home(false, false, true);
+		}
+	}
+	else
+	{
+		const uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+	    const millis_l nozzle_timeout = (millis_l)(PAUSE_PARK_NOZZLE_TIMEOUT) * 1000UL;
+	    heaters[heater].start_idle_timer(nozzle_timeout);
+	}
+
+	// Move XY to change position
+    const point_t park_point = NOZZLE_PARK_POINT;
+	Nozzle::park(3, park_point);
+
+	//Changing tool
+	uint8_t extruder_id = Tools::extruder_driver_to_extruder(NextionHMI::wizardData - E_AXIS);
+	if (extruder_id!=tools.active_extruder) tools.change(extruder_id, 0, false, false);
+
+}
+
+void StateWizard::MaterialLoadS1a(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+		StateTemperature::Activate(heater, MaterialLoadS2, MaterialLoadCancel);
+	}
+}
+
+void StateWizard::MaterialLoadS2(void* ptr) {
+	BUTTONS(1)
+	NO_PICTURE
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "2/6", NEX_ICON_MAINTENANCE);
+	MaterialLoadS2DrawUpdate();
+
+	Init1Button(PSTR(MSG_CANCEL), MaterialLoadCancel);
+
+	uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+    heaters[heater].reset_idle_timer();
+
+	//to update temperature value
+	DrawUpdateCallback = MaterialLoadS2DrawUpdate;
+
+	//waiting for heating
+	Temperature::wait_heater(&heaters[heater]);
+
+    DrawUpdateCallback = NULL;
+
+    if (!_wizardCancelled)
+    {
+		if (thermalManager.tooColdToExtrude(heater))
+			MaterialLoadS2a();
+		else
+		{
+			MaterialLoadS3();
+		}
+    }
+
+}
+
+void StateWizard::MaterialLoadS2a(void* ptr) {
+	BUTTONS(2)
+	NO_PICTURE
+	CAPTION(MSG_LOAD_MATERIAL_ST2A)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "2/6", NEX_ICON_MAINTENANCE);
+
+	Init2Buttons(PSTR(MSG_CANCEL), MaterialLoadCancel, PSTR(MSG_NEXT), MaterialLoadS1a);
+}
+
+void StateWizard::MaterialLoadS2DrawUpdate(void *ptr) {
+	uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+	ZERO(NextionHMI::buffer);
+	sprintf_P(NextionHMI::buffer, PSTR(MSG_LOAD_MATERIAL_ST2), (int)heaters[heater].current_temperature, (int)heaters[heater].target_temperature);
+	_text.setText(NextionHMI::buffer);
+}
+
+void StateWizard::MaterialLoadS3(void* ptr) {
+
+	BUTTONS(2)
+	NO_PICTURE
+	CAPTION(MSG_LOAD_MATERIAL_ST3)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "3/6", NEX_ICON_MAINTENANCE);
+
+	Init2Buttons(PSTR(MSG_CANCEL), MaterialLoadCancel, PSTR(MSG_NEXT), MaterialLoadS3a);
+
+
+	//waiting for 120 seconds
+	const uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+    const millis_l nozzle_timeout = (millis_l)(PAUSE_PARK_NOZZLE_TIMEOUT) * 1000UL;
+    heaters[heater].start_idle_timer(nozzle_timeout);
+
+	_loopStopped = false;
+	while(!_loopStopped && !_wizardCancelled && !heaters[heater].isIdle())
+	{
+		if (planner.movesplanned() < 2)
+		{
+			mechanics.current_position[NextionHMI::wizardData] += 0.5;
+			planner.buffer_line(mechanics.current_position, PrintPause::ExtrudeFeedrate, tools.active_extruder);
+		}
+		printer.idle();
+		printer.keepalive(InProcess);
+	}
+
+	//timeout
+	if (heaters[heater].isIdle())
+	{
+		heaters[heater].setTarget(0);
+		StateMessage::ActivatePGM(MESSAGE_WARNING, NEX_ICON_WARNING, MSG_HEADER_LOAD_MATERIAL, PSTR(MSG_LOAD_MATERIAL_ST3_TIMEOUT), 2, PSTR(MSG_REPEAT), MaterialLoadS2, PSTR(MSG_CANCEL), MaterialLoadCancel, NEX_ICON_DIALOG_WARNING);
+	}
+	else
+	{
+		//if ok - proceed to the next step
+		if (!_wizardCancelled) MaterialLoadS4();
+	}
+
+}
+
+void StateWizard::MaterialLoadS3a(void* ptr) {
+	//Stop extruding
+	_loopStopped = true;
+}
+
+
+
+void StateWizard::MaterialLoadS4(void* ptr) {
+	BUTTONS(1)
+	NO_PICTURE
+	CAPTION(MSG_LOAD_MATERIAL_ST4)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "4/6", NEX_ICON_MAINTENANCE);
+
+	Init1Button(PSTR(MSG_CANCEL), MaterialLoadCancel);
+
+	uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+    heaters[heater].reset_idle_timer();
+
+	int extrude_length = 0;
+	while (extrude_length<PrintPause::LoadDistance[NextionHMI::wizardData-E_AXIS] && !_wizardCancelled)
+	{
+		if (planner.movesplanned() < 2)
+		{
+			mechanics.current_position[NextionHMI::wizardData] += 1.0;
+			extrude_length += 1.0;
+			planner.buffer_line(mechanics.current_position, PrintPause::LoadFeedrate, tools.active_extruder);
+		}
+		printer.idle();
+		printer.keepalive(InProcess);
+	}
+
+	if (!_wizardCancelled) MaterialLoadS5();
+}
+
+void StateWizard::MaterialLoadS5(void* ptr) {
+	BUTTONS(2)
+	NO_PICTURE
+	CAPTION(MSG_LOAD_MATERIAL_ST5)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "5/6", NEX_ICON_MAINTENANCE);
+
+	Init2Buttons(PSTR(MSG_CANCEL), MaterialLoadCancel, PSTR(MSG_NEXT), MaterialLoadS5a);
+
+
+	//waiting for 120 seconds
+	const uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+    const millis_l nozzle_timeout = (millis_l)(PAUSE_PARK_NOZZLE_TIMEOUT) * 1000UL;
+    heaters[heater].start_idle_timer(nozzle_timeout);
+
+	_loopStopped = false;
+	while(!_loopStopped && !_wizardCancelled && !heaters[heater].isIdle())
+	{
+		if (planner.movesplanned() < 2)
+		{
+			mechanics.current_position[NextionHMI::wizardData] += 0.5;
+			planner.buffer_line(mechanics.current_position, PrintPause::ExtrudeFeedrate, tools.active_extruder);
+		}
+		printer.idle();
+		printer.keepalive(InProcess);
+	}
+
+
+	//timeout
+	if (heaters[heater].isIdle())
+	{
+		_wizardCancelled = true;
+		heaters[heater].setTarget(0);
+		StateMessage::ActivatePGM(MESSAGE_WARNING, NEX_ICON_WARNING, MSG_HEADER_LOAD_MATERIAL, PSTR(MSG_LOAD_MATERIAL_ST5_TIMEOUT), 1, PSTR(MSG_OK), MaterialLoadCancel, 0, 0, NEX_ICON_DIALOG_WARNING);
+	}
+	else
+	{
+
+		if (!_wizardCancelled) MaterialLoadS6();
+	}
+
+
+
+}
+
+void StateWizard::MaterialLoadS5a(void* ptr) {
+	_loopStopped = true;
+}
+
+void StateWizard::MaterialLoadS6(void* ptr) {
+	if (!Tools::extruder_driver_is_plastic((AxisEnum)NextionHMI::wizardData))
+	{
+		//Cut fiber
+		stepper.synchronize();
+		//cut
+		tools.cut_fiber();
+	}
+	else
+	{
+    	PrintPause::DoPauseExtruderMove((AxisEnum)NextionHMI::wizardData, -PrintPause::RetractDistance, PrintPause::RetractFeedrate);
+	}
+	BUTTONS(1)
+	NO_PICTURE
+	CAPTION(MSG_LOAD_MATERIAL_ST6)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "6/6", NEX_ICON_MAINTENANCE);
+
+	Init1Button(PSTR(MSG_FINISH), MaterialLoadFinish);
+
+}
+
+void StateWizard::MaterialLoadFinish(void* ptr) {
+	BUTTONS(0)
+	NO_PICTURE
+	CAPTION(MSG_PLEASE_WAIT)
+	HEADER_LOAD_UNLOAD(MSG_HEADER_LOAD_MATERIAL, "", NEX_ICON_MAINTENANCE);
+
+	stepper.synchronize();
+
+	uint8_t heater = Tools::extruder_driver_to_extruder(NextionHMI::wizardData-E_AXIS);
+
+	if (printer.getStatus()==Paused)
+	{
+		PrintPause::RestoreTemperatures();
+
+	    const millis_l nozzle_timeout = (millis_l)(PAUSE_PARK_NOZZLE_TIMEOUT) * 1000UL;
+	    heaters[heater].start_idle_timer(nozzle_timeout);
+	}
+	else
+	{
+		heaters[heater].setTarget(0);
+		heaters[heater].reset_idle_timer();
+	};
+
+	// Move XY to park position
+    const point_t park_point = NOZZLE_PARK_POINT;
+	Nozzle::park(3, park_point);
+
+	printer.setIdleIfBusy();
+	StateMenu::ActivateLoadUnload();
+}
+
+void StateWizard::MaterialLoadCancel(void* ptr) {
+	_wizardCancelled = true;
+	printer.setWaitForHeatUp(false);
+	MaterialLoadFinish();
+}
+
+void StateWizard::BuildPlateS1(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		printer.setBusyIfIdle();
+
+		_wizardCancelled = false;
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST1)
+		HEADER(MSG_HEADER_BP_CALIBR, "1/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), BuildPlateCancel, PSTR(MSG_NEXT), StateWizard::BuildPlateS2);
+
+		//Homing if not homed
+		mechanics.home(false, false, true);
+		if (mechanics.axis_unhomed_error())
+		{
+			mechanics.home(true, true, false);
+		}
+
+		//Changing tool
+		if (tools.active_extruder!=0)
+		{
+			tools.change(0, 0, false, false);
+		}
+
+	}
+}
+
+void StateWizard::BuildPlateS2(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		printer.setBusyIfIdle();
+
+		_wizardCancelled = false;
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST2)
+		HEADER(MSG_HEADER_BP_CALIBR, "2/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), BuildPlateCancel, PSTR(MSG_NEXT), StateWizard::BuildPlateS2a);
+
+	}
+}
+
+//Calibration 2a - display set temperature screen
+void StateWizard::BuildPlateS2a(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		StateTemperature::Activate(BED_INDEX, BuildPlateS3, BuildPlateCancel);
+	}
+}
+
+//Calibration 3 - Wait for temperature to reach target
+void StateWizard::BuildPlateS3(void* ptr) {
+	BUTTONS(1)
+	NO_PICTURE
+	HEADER(MSG_HEADER_BP_CALIBR, "3/11", NEX_ICON_MAINTENANCE);
+	BuildPlateS3DrawUpdate();
+	Init1Button(PSTR(MSG_CANCEL), BuildPlateCancel);
+
+    heaters[BED_INDEX].reset_idle_timer();
+
+	//to update temperature value
+	DrawUpdateCallback = BuildPlateS3DrawUpdate;
+
+	Temperature::wait_heater(&heaters[BED_INDEX]);
+
+    DrawUpdateCallback = NULL;
+
+    if (!_wizardCancelled) {
+    	BuildPlateS4();
+    }
+
+}
+
+void StateWizard::BuildPlateS3DrawUpdate(void *ptr) {
+	ZERO(NextionHMI::buffer);
+	sprintf_P(NextionHMI::buffer, PSTR(MSG_BP_CALIBR_ST3), (int)heaters[BED_INDEX].current_temperature, (int)heaters[BED_INDEX].target_temperature);
+	_text.setText(NextionHMI::buffer);
+}
+
+void StateWizard::BuildPlateS4(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		//Going to center adjust position
+		mechanics.do_blocking_move_to_xy(int(BED_CENTER_ADJUST_X), int(BED_CENTER_ADJUST_Y), NOZZLE_PARK_XY_FEEDRATE);
+
+		//Going to Z adjust position
+		mechanics.do_blocking_move_to_z(10, mechanics.homing_feedrate_mm_s[Z_AXIS]);
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST4)
+		HEADER(MSG_HEADER_BP_CALIBR, "4/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), BuildPlateCancel, PSTR(MSG_NEXT), StateWizardZ::BuildPlateS5);
+
+	}
+}
+
+void StateWizard::BuildPlateFinish(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		BUTTONS(0)
+		NO_PICTURE
+		CAPTION(MSG_PLEASE_WAIT)
+		HEADER(MSG_HEADER_BP_CALIBR, "", NEX_ICON_MAINTENANCE);
+		float dz = mechanics.current_position[Z_AXIS]-LEVELING_OFFSET;
+		mechanics.set_home_offset(Z_AXIS, mechanics.home_offset[Z_AXIS]-dz);
+
+		heaters[BED_INDEX].setTarget(0);
+		heaters[BED_INDEX].reset_idle_timer();
+
+		mechanics.home(true, true, true);
+		StateStatus::Activate();
+		eeprom.Store_Settings();
+		printer.setIdleIfBusy();
+	}
+}
+
+void StateWizard::BuildPlateCancel(void* ptr) {
+	if (!planner.movesplanned())
+	{
+	    DrawUpdateCallback = NULL;
+
+		BUTTONS(0)
+		NO_PICTURE
+		CAPTION(MSG_PLEASE_WAIT)
+		HEADER(MSG_HEADER_BP_CALIBR, "", NEX_ICON_MAINTENANCE);
+
+		_wizardCancelled = true;
+		printer.setWaitForHeatUp(false);
+		heaters[BED_INDEX].setTarget(0);
+		heaters[BED_INDEX].reset_idle_timer();
+
+		mechanics.home(true, true, true);
+		printer.setIdleIfBusy();
+		StateStatus::Activate();
+	}
+}
+
+void StateWizard::BuildPlateS6(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		//Going to left position
+		mechanics.current_position[Z_AXIS] += 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+		mechanics.current_position[X_AXIS] = BED_LEFT_ADJUST_X;
+		mechanics.current_position[Y_AXIS] = BED_LEFT_ADJUST_Y;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[X_AXIS], tools.active_extruder);
+		mechanics.current_position[Z_AXIS] -= 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST6)
+		HEADER(MSG_HEADER_BP_CALIBR, "6/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), BuildPlateCancel, PSTR(MSG_NEXT), StateWizard::BuildPlateS7);
+	}
+}
+
+void StateWizard::BuildPlateS7(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		//Going to right position
+		mechanics.current_position[Z_AXIS] += 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+		mechanics.current_position[X_AXIS] = BED_RIGHT_ADJUST_X;
+		mechanics.current_position[Y_AXIS] = BED_RIGHT_ADJUST_Y;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[X_AXIS], tools.active_extruder);
+		mechanics.current_position[Z_AXIS] -= 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST7)
+		HEADER(MSG_HEADER_BP_CALIBR, "7/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), BuildPlateCancel, PSTR(MSG_NEXT), StateWizard::BuildPlateS8);
+	}
+}
+
+void StateWizard::BuildPlateS8(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		//Going to center position
+		mechanics.current_position[Z_AXIS] += 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+		mechanics.current_position[X_AXIS] = BED_CENTER_ADJUST_X;
+		mechanics.current_position[Y_AXIS] = BED_CENTER_ADJUST_Y;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[X_AXIS], tools.active_extruder);
+		mechanics.current_position[Z_AXIS] -= 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST8)
+		HEADER(MSG_HEADER_BP_CALIBR, "8/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), BuildPlateCancel, PSTR(MSG_NEXT), StateWizardZ::BuildPlateS9);
+	}
+}
+
+void StateWizard::BuildPlateS10(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		//Going to left position
+		mechanics.current_position[Z_AXIS] += 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+		mechanics.current_position[X_AXIS] = BED_LEFT_ADJUST_X;
+		mechanics.current_position[Y_AXIS] = BED_LEFT_ADJUST_Y;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[X_AXIS], tools.active_extruder);
+		mechanics.current_position[Z_AXIS] -= 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST10)
+		HEADER(MSG_HEADER_BP_CALIBR, "10/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_CANCEL), BuildPlateCancel, PSTR(MSG_NEXT), StateWizard::BuildPlateS11);
+	}
+}
+
+void StateWizard::BuildPlateS11(void* ptr) {
+	if (!planner.movesplanned())
+	{
+		//Going to right position
+		mechanics.current_position[Z_AXIS] += 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+		mechanics.current_position[X_AXIS] = BED_RIGHT_ADJUST_X;
+		mechanics.current_position[Y_AXIS] = BED_RIGHT_ADJUST_Y;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[X_AXIS], tools.active_extruder);
+		mechanics.current_position[Z_AXIS] -= 5;
+		planner.buffer_line(mechanics.current_position, mechanics.homing_feedrate_mm_s[Z_AXIS], tools.active_extruder);
+
+		BUTTONS(2)
+		NO_PICTURE
+		CAPTION(MSG_BP_CALIBR_ST11)
+		HEADER(MSG_HEADER_BP_CALIBR, "11/11", NEX_ICON_MAINTENANCE);
+
+		Init2Buttons(PSTR(MSG_REPEAT), StateWizard::BuildPlateS8, PSTR(MSG_FINISH), StateWizard::BuildPlateFinish);
+	}
+}
+
+void StateWizard::DrawUpdate() {
+	if (DrawUpdateCallback!=NULL)
+	{
+
+		DrawUpdateCallback(NULL);
+	}
+}
+
+
+
+
+#endif
+

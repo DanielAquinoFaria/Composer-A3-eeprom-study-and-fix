@@ -1,0 +1,4 @@
+# Preserve upstream source bytes for the provenance SHA-256 checks.
+dependencies/** -text
+*.bin binary
+*.png binary

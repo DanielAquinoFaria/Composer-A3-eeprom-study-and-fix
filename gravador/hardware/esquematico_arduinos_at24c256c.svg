@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1340" viewBox="0 0 1500 1340">
+<title>Gravador AT24C256C com Arduino AVR 5 V</title>
+<desc>Esquema elétrico de SDA, SCL, WP, alimentação, pull-ups e desacoplamento, com tabela Uno, Nano clássico e Mega 2560.</desc>
+<rect width="1500" height="1340" fill="white"/>
+<text x="60" y="73" font-family="Segoe UI,Arial,sans-serif" font-size="38" fill="#172B40" font-weight="700">AT24C256C  |  Leitor e gravador</text>
+<text x="60" y="113" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#4F6376">Esquema de bancada • Arduino AVR de 5 V • EEPROM isolada da impressora</text>
+<rect x="60" y="135" width="1380" height="50" fill="#FFF4E5" stroke="#D99A32" stroke-width="2"/>
+<text x="78" y="164" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#172B40">Use UMA placa Arduino por vez. Monte com a alimentação desligada. Não use este esquema em barramento de 3,3 V.</text>
+<rect x="90" y="340" width="350" height="390" fill="#F0F7FA" stroke="#172B40" stroke-width="2"/>
+<text x="115" y="384" font-family="Segoe UI,Arial,sans-serif" font-size="29" fill="#172B40" font-weight="700">ARDUINO</text>
+<text x="115" y="418" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#4F6376">USB → computador</text>
+<text x="115" y="455" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#4F6376">Uno / Nano / Mega</text>
+<text x="295" y="493" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#006D77" font-weight="700">SDA</text>
+<polyline points="440,500 900,500" fill="none" stroke="#006D77" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="650,500 650,485" fill="none" stroke="#006D77" stroke-width="3" stroke-linejoin="round"/>
+<rect x="641" y="452" width="18" height="33" fill="white" stroke="#006D77" stroke-width="2"/>
+<polyline points="650,452 650,438" fill="none" stroke="#006D77" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="643,445 650,438 657,445" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<text x="628" y="431" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#B42318" font-weight="700">+5 V</text>
+<text x="670" y="470" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#006D77" font-weight="700">R1  4,7 kΩ</text>
+<circle cx="650" cy="500" r="5" fill="#006D77"/>
+<text x="850" y="492" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#006D77" font-weight="700">5</text>
+<text x="295" y="583" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#1D4ED8" font-weight="700">SCL</text>
+<polyline points="440,590 900,590" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="650,590 650,575" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-linejoin="round"/>
+<rect x="641" y="542" width="18" height="33" fill="white" stroke="#1D4ED8" stroke-width="2"/>
+<polyline points="650,542 650,528" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="643,535 650,528 657,535" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<text x="628" y="521" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#B42318" font-weight="700">+5 V</text>
+<text x="670" y="560" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#1D4ED8" font-weight="700">R2  4,7 kΩ</text>
+<circle cx="650" cy="590" r="5" fill="#1D4ED8"/>
+<text x="850" y="582" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#1D4ED8" font-weight="700">6</text>
+<text x="295" y="673" font-family="Segoe UI,Arial,sans-serif" font-size="22" fill="#8A3C99" font-weight="700">D7 / WP</text>
+<polyline points="440,680 900,680" fill="none" stroke="#8A3C99" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="650,680 650,665" fill="none" stroke="#8A3C99" stroke-width="3" stroke-linejoin="round"/>
+<rect x="641" y="632" width="18" height="33" fill="white" stroke="#8A3C99" stroke-width="2"/>
+<polyline points="650,632 650,618" fill="none" stroke="#8A3C99" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="643,625 650,618 657,625" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<text x="628" y="611" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#B42318" font-weight="700">+5 V</text>
+<text x="670" y="650" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#8A3C99" font-weight="700">R3  10 kΩ</text>
+<circle cx="650" cy="680" r="5" fill="#8A3C99"/>
+<text x="850" y="672" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#8A3C99" font-weight="700">7</text>
+<rect x="900" y="300" width="260" height="460" fill="#F7F8FC" stroke="#172B40" stroke-width="2"/>
+<text x="925" y="343" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#172B40" font-weight="700">U1</text>
+<text x="925" y="381" font-family="Segoe UI,Arial,sans-serif" font-size="26" fill="#172B40" font-weight="700">AT24C256C</text>
+<text x="925" y="415" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#4F6376">32.768 bytes</text>
+<text x="920" y="508" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#006D77" font-weight="700">SDA</text>
+<text x="920" y="598" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#1D4ED8" font-weight="700">SCL</text>
+<text x="920" y="688" font-family="Segoe UI,Arial,sans-serif" font-size="23" fill="#8A3C99" font-weight="700">WP</text>
+<text x="1008" y="327" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#B42318">VCC</text>
+<polyline points="1030,300 1030,245 1270,245" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1030,245 1030,227" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1021,236 1030,227 1039,236" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<text x="1008" y="215" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#B42318" font-weight="700">+5 V</text>
+<text x="1045" y="285" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#B42318">8</text>
+<polyline points="1270,245 1270,270" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="1270" cy="245" r="5" fill="#B42318"/>
+<polyline points="1250,270 1290,270" fill="none" stroke="#B42318" stroke-width="4" stroke-linejoin="round"/>
+<polyline points="1250,282 1290,282" fill="none" stroke="#B42318" stroke-width="4" stroke-linejoin="round"/>
+<polyline points="1270,282 1270,300" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1270,300 1270,315" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1252,315 1288,315" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1258,323 1282,323" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1264,331 1276,331" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<text x="1300" y="277" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40" font-weight="700">C1</text>
+<text x="1300" y="305" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">100 nF</text>
+<text x="1200" y="369" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="#4F6376">Próximo aos pinos 8 e 4</text>
+<text x="1090" y="443" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">A0</text>
+<text x="1170" y="431" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#172B40">1</text>
+<polyline points="1160,440 1240,440" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="1240" cy="440" r="5" fill="#334155"/>
+<text x="1090" y="523" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">A1</text>
+<text x="1170" y="511" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#172B40">2</text>
+<polyline points="1160,520 1240,520" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="1240" cy="520" r="5" fill="#334155"/>
+<text x="1090" y="603" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">A2</text>
+<text x="1170" y="591" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#172B40">3</text>
+<polyline points="1160,600 1240,600" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="1240" cy="600" r="5" fill="#334155"/>
+<text x="1090" y="723" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">GND</text>
+<text x="1170" y="711" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#172B40">4</text>
+<polyline points="1160,720 1240,720" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="1240" cy="720" r="5" fill="#334155"/>
+<polyline points="1240,440 1240,770" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1240,770 1240,785" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1222,785 1258,785" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1228,793 1252,793" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="1234,801 1246,801" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<text x="1280" y="489" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#172B40" font-weight="700">A0/A1/A2 = GND</text>
+<text x="1280" y="522" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#172B40">Endereço: 0x50</text>
+<text x="1280" y="562" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#4F6376">São pinos do CI,</text>
+<text x="1280" y="588" font-family="Segoe UI,Arial,sans-serif" font-size="17" fill="#4F6376">não do Arduino.</text>
+<polyline points="170,340 170,285" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="170,285 170,267" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="161,276 170,267 179,276" fill="none" stroke="#B42318" stroke-width="3" stroke-linejoin="round"/>
+<text x="148" y="255" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#B42318" font-weight="700">+5 V</text>
+<text x="190" y="315" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#B42318">Pino 5V</text>
+<polyline points="190,730 190,770" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="190,770 190,785" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="172,785 208,785" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="178,793 202,793" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="184,801 196,801" fill="none" stroke="#334155" stroke-width="3" stroke-linejoin="round"/>
+<text x="225" y="767" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">Pino GND</text>
+<text x="90" y="851" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#172B40" font-weight="700">Todos os símbolos +5 V estão conectados entre si; todos os GND também.</text>
+<text x="90" y="882" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#4F6376">R1/R2/R3 são ramificações para +5 V. Os sinais Arduino ↔ EEPROM são ligações diretas.</text>
+<text x="60" y="941" font-family="Segoe UI,Arial,sans-serif" font-size="26" fill="#172B40" font-weight="700">Pinos a utilizar em cada Arduino</text>
+<rect x="60" y="960" width="1380" height="40" fill="#E9EFF5" stroke="#CBD5E1" stroke-width="2"/>
+<text x="80" y="986" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40" font-weight="700">Sinal</text>
+<text x="305" y="986" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40" font-weight="700">Uno R3</text>
+<text x="555" y="986" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40" font-weight="700">Nano clássico</text>
+<text x="860" y="986" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40" font-weight="700">Mega 2560</text>
+<text x="1170" y="986" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40" font-weight="700">EEPROM</text>
+<rect x="60" y="1000" width="1380" height="43" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+<text x="80" y="1026" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">SDA</text>
+<text x="305" y="1026" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">A4 / SDA</text>
+<text x="555" y="1026" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">A4</text>
+<text x="860" y="1026" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">D20 / SDA</text>
+<text x="1170" y="1026" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">5</text>
+<rect x="60" y="1043" width="1380" height="43" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+<text x="80" y="1069" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">SCL</text>
+<text x="305" y="1069" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">A5 / SCL</text>
+<text x="555" y="1069" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">A5</text>
+<text x="860" y="1069" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">D21 / SCL</text>
+<text x="1170" y="1069" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">6</text>
+<rect x="60" y="1086" width="1380" height="43" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+<text x="80" y="1112" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">WP</text>
+<text x="305" y="1112" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">D7</text>
+<text x="555" y="1112" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">D7</text>
+<text x="860" y="1112" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">D7</text>
+<text x="1170" y="1112" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">7</text>
+<rect x="60" y="1129" width="1380" height="43" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+<text x="80" y="1155" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">Alimentação</text>
+<text x="305" y="1155" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">5V e GND</text>
+<text x="555" y="1155" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">5V e GND</text>
+<text x="860" y="1155" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">5V e GND</text>
+<text x="1170" y="1155" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#172B40">8 e 4</text>
+<text x="60" y="1216" font-family="Segoe UI,Arial,sans-serif" font-size="21" fill="#172B40" font-weight="700">WP alto: gravação bloqueada. WP baixo: gravação permitida. A leitura funciona nos dois estados.</text>
+<text x="60" y="1253" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#4F6376">R3 mantém a proteção no reset. D7 libera cada escrita. Não substitua R3 por um capacitor.</text>
+<text x="60" y="1290" font-family="Segoe UI,Arial,sans-serif" font-size="19" fill="#4F6376">Símbolo funcional, não vista física do CI. Veja MONTAGEM.md para orientação, componentes e sequência de uso.</text>
+</svg>

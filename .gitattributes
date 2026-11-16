@@ -1,0 +1,13 @@
+* -text
+*.bin binary
+*.fw2 binary
+*.exe binary
+*.dll binary
+*.pdb binary
+*.zip binary
+*.pdf binary
+*.docx binary
+*.png binary
+*.HMI binary
+*.tft binary
+# Preservar bytes também dos textos para manter os hashes da entrega entre clones.

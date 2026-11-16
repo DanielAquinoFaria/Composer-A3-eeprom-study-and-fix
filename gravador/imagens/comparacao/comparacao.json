@@ -1,0 +1,492 @@
+{
+  "reference": "AT24C256C_Composer_A3_1.0.5_MKA_sem_SN.bin",
+  "reference_sha256": "a54501351980aeef05636856efa92e8a668bbfaf2794a42b80f438af59d0dc1e",
+  "groups": {
+    "dfe768e3078328d2a3c783744fbd9d8190fc748eb013eaefdcd05ce41cbe8b01": [
+      "chip_placa_original_erro_direcao_v1.bin",
+      "chip_placa_original_erro_direcao_v2.bin",
+      "chip_placa_original_erro_direcao_v3.bin"
+    ],
+    "47c8eaa84ba48d42a29601730fbf2f5f8050b40334c50fe399c77595b171add8": [
+      "chip_placa_original_erro_tamanho_offset_v1.bin",
+      "chip_placa_original_erro_tamanho_offset_v2.bin",
+      "chip_placa_original_erro_tamanho_offset_v3.bin"
+    ]
+  },
+  "captures": [
+    {
+      "file": "chip_placa_original_erro_direcao_v1.bin",
+      "sha256": "dfe768e3078328d2a3c783744fbd9d8190fc748eb013eaefdcd05ce41cbe8b01",
+      "blocks": {
+        "USER": {
+          "version_hex": "4d4b41313200",
+          "stored_crc": 59322,
+          "calculated_crc": 59322,
+          "crc_ok": true,
+          "identical_to_reference": false
+        },
+        "SYSTEM": {
+          "version_hex": "534331320000",
+          "stored_crc": 13673,
+          "calculated_crc": 13673,
+          "crc_ok": true,
+          "identical_to_reference": true
+        }
+      },
+      "dir_hex": "00 01 01 01 01 01",
+      "serial_hex": "4150434133333130333300000000000000",
+      "version_hex": "312e302e346e770000",
+      "differences": [
+        {
+          "name": "steps_V",
+          "offset": 26,
+          "offset_hex": "0x001A",
+          "hex": "0000d043",
+          "value": 416.0,
+          "reference": 410.0
+        },
+        {
+          "name": "home_Z",
+          "offset": 38,
+          "offset_hex": "0x0026",
+          "hex": "2c3373c0",
+          "value": -3.7999982833862305,
+          "reference": 0.0
+        },
+        {
+          "name": "hotend_1_X",
+          "offset": 46,
+          "offset_hex": "0x002E",
+          "hex": "000000c0",
+          "value": -2.0,
+          "reference": -2.200000047683716
+        },
+        {
+          "name": "hotend_1_Y",
+          "offset": 54,
+          "offset_hex": "0x0036",
+          "hex": "9a998dc1",
+          "value": -17.700000762939453,
+          "reference": -16.5
+        },
+        {
+          "name": "hotend_1_Z",
+          "offset": 62,
+          "offset_hex": "0x003E",
+          "hex": "9a993940",
+          "value": 2.9000000953674316,
+          "reference": 0.0
+        },
+        {
+          "name": "preheat_hotend",
+          "offset": 74,
+          "offset_hex": "0x004A",
+          "hex": "d700",
+          "value": 215,
+          "reference": 230
+        }
+      ],
+      "byte_differences": 31,
+      "unused_differences": 0
+    },
+    {
+      "file": "chip_placa_original_erro_direcao_v2.bin",
+      "sha256": "dfe768e3078328d2a3c783744fbd9d8190fc748eb013eaefdcd05ce41cbe8b01",
+      "blocks": {
+        "USER": {
+          "version_hex": "4d4b41313200",
+          "stored_crc": 59322,
+          "calculated_crc": 59322,
+          "crc_ok": true,
+          "identical_to_reference": false
+        },
+        "SYSTEM": {
+          "version_hex": "534331320000",
+          "stored_crc": 13673,
+          "calculated_crc": 13673,
+          "crc_ok": true,
+          "identical_to_reference": true
+        }
+      },
+      "dir_hex": "00 01 01 01 01 01",
+      "serial_hex": "4150434133333130333300000000000000",
+      "version_hex": "312e302e346e770000",
+      "differences": [
+        {
+          "name": "steps_V",
+          "offset": 26,
+          "offset_hex": "0x001A",
+          "hex": "0000d043",
+          "value": 416.0,
+          "reference": 410.0
+        },
+        {
+          "name": "home_Z",
+          "offset": 38,
+          "offset_hex": "0x0026",
+          "hex": "2c3373c0",
+          "value": -3.7999982833862305,
+          "reference": 0.0
+        },
+        {
+          "name": "hotend_1_X",
+          "offset": 46,
+          "offset_hex": "0x002E",
+          "hex": "000000c0",
+          "value": -2.0,
+          "reference": -2.200000047683716
+        },
+        {
+          "name": "hotend_1_Y",
+          "offset": 54,
+          "offset_hex": "0x0036",
+          "hex": "9a998dc1",
+          "value": -17.700000762939453,
+          "reference": -16.5
+        },
+        {
+          "name": "hotend_1_Z",
+          "offset": 62,
+          "offset_hex": "0x003E",
+          "hex": "9a993940",
+          "value": 2.9000000953674316,
+          "reference": 0.0
+        },
+        {
+          "name": "preheat_hotend",
+          "offset": 74,
+          "offset_hex": "0x004A",
+          "hex": "d700",
+          "value": 215,
+          "reference": 230
+        }
+      ],
+      "byte_differences": 31,
+      "unused_differences": 0
+    },
+    {
+      "file": "chip_placa_original_erro_direcao_v3.bin",
+      "sha256": "dfe768e3078328d2a3c783744fbd9d8190fc748eb013eaefdcd05ce41cbe8b01",
+      "blocks": {
+        "USER": {
+          "version_hex": "4d4b41313200",
+          "stored_crc": 59322,
+          "calculated_crc": 59322,
+          "crc_ok": true,
+          "identical_to_reference": false
+        },
+        "SYSTEM": {
+          "version_hex": "534331320000",
+          "stored_crc": 13673,
+          "calculated_crc": 13673,
+          "crc_ok": true,
+          "identical_to_reference": true
+        }
+      },
+      "dir_hex": "00 01 01 01 01 01",
+      "serial_hex": "4150434133333130333300000000000000",
+      "version_hex": "312e302e346e770000",
+      "differences": [
+        {
+          "name": "steps_V",
+          "offset": 26,
+          "offset_hex": "0x001A",
+          "hex": "0000d043",
+          "value": 416.0,
+          "reference": 410.0
+        },
+        {
+          "name": "home_Z",
+          "offset": 38,
+          "offset_hex": "0x0026",
+          "hex": "2c3373c0",
+          "value": -3.7999982833862305,
+          "reference": 0.0
+        },
+        {
+          "name": "hotend_1_X",
+          "offset": 46,
+          "offset_hex": "0x002E",
+          "hex": "000000c0",
+          "value": -2.0,
+          "reference": -2.200000047683716
+        },
+        {
+          "name": "hotend_1_Y",
+          "offset": 54,
+          "offset_hex": "0x0036",
+          "hex": "9a998dc1",
+          "value": -17.700000762939453,
+          "reference": -16.5
+        },
+        {
+          "name": "hotend_1_Z",
+          "offset": 62,
+          "offset_hex": "0x003E",
+          "hex": "9a993940",
+          "value": 2.9000000953674316,
+          "reference": 0.0
+        },
+        {
+          "name": "preheat_hotend",
+          "offset": 74,
+          "offset_hex": "0x004A",
+          "hex": "d700",
+          "value": 215,
+          "reference": 230
+        }
+      ],
+      "byte_differences": 31,
+      "unused_differences": 0
+    },
+    {
+      "file": "chip_placa_original_erro_tamanho_offset_v1.bin",
+      "sha256": "47c8eaa84ba48d42a29601730fbf2f5f8050b40334c50fe399c77595b171add8",
+      "blocks": {
+        "USER": {
+          "version_hex": "4d4b41313200",
+          "stored_crc": 24754,
+          "calculated_crc": 24754,
+          "crc_ok": true,
+          "identical_to_reference": false
+        },
+        "SYSTEM": {
+          "version_hex": "534331320000",
+          "stored_crc": 13673,
+          "calculated_crc": 13673,
+          "crc_ok": true,
+          "identical_to_reference": true
+        }
+      },
+      "dir_hex": "00 01 01 01 01 01",
+      "serial_hex": "ffffffffffffffffffffffffffffffffff",
+      "version_hex": "312e302e346e770000",
+      "differences": [
+        {
+          "name": "hotend_1_X",
+          "offset": 46,
+          "offset_hex": "0x002E",
+          "hex": "00000000",
+          "value": 0.0,
+          "reference": -2.200000047683716
+        },
+        {
+          "name": "hotend_1_Y",
+          "offset": 54,
+          "offset_hex": "0x0036",
+          "hex": "00000000",
+          "value": 0.0,
+          "reference": -16.5
+        },
+        {
+          "name": "switch_offset_X",
+          "offset": 66,
+          "offset_hex": "0x0042",
+          "hex": "04013c00",
+          "value": 5.510494107080197e-39,
+          "reference": 0.0
+        },
+        {
+          "name": "switch_offset_Y",
+          "offset": 70,
+          "offset_hex": "0x0046",
+          "hex": "040185db",
+          "value": -7.487457718802842e+16,
+          "reference": 0.0
+        },
+        {
+          "name": "preheat_hotend",
+          "offset": 74,
+          "offset_hex": "0x004A",
+          "hex": "401f",
+          "value": 8000,
+          "reference": 230
+        },
+        {
+          "name": "preheat_bed",
+          "offset": 76,
+          "offset_hex": "0x004C",
+          "hex": "85db",
+          "value": 56197,
+          "reference": 60
+        },
+        {
+          "name": "lcd_brightness",
+          "offset": 78,
+          "offset_hex": "0x004E",
+          "hex": "40",
+          "value": 64,
+          "reference": 90
+        }
+      ],
+      "byte_differences": 40,
+      "unused_differences": 0
+    },
+    {
+      "file": "chip_placa_original_erro_tamanho_offset_v2.bin",
+      "sha256": "47c8eaa84ba48d42a29601730fbf2f5f8050b40334c50fe399c77595b171add8",
+      "blocks": {
+        "USER": {
+          "version_hex": "4d4b41313200",
+          "stored_crc": 24754,
+          "calculated_crc": 24754,
+          "crc_ok": true,
+          "identical_to_reference": false
+        },
+        "SYSTEM": {
+          "version_hex": "534331320000",
+          "stored_crc": 13673,
+          "calculated_crc": 13673,
+          "crc_ok": true,
+          "identical_to_reference": true
+        }
+      },
+      "dir_hex": "00 01 01 01 01 01",
+      "serial_hex": "ffffffffffffffffffffffffffffffffff",
+      "version_hex": "312e302e346e770000",
+      "differences": [
+        {
+          "name": "hotend_1_X",
+          "offset": 46,
+          "offset_hex": "0x002E",
+          "hex": "00000000",
+          "value": 0.0,
+          "reference": -2.200000047683716
+        },
+        {
+          "name": "hotend_1_Y",
+          "offset": 54,
+          "offset_hex": "0x0036",
+          "hex": "00000000",
+          "value": 0.0,
+          "reference": -16.5
+        },
+        {
+          "name": "switch_offset_X",
+          "offset": 66,
+          "offset_hex": "0x0042",
+          "hex": "04013c00",
+          "value": 5.510494107080197e-39,
+          "reference": 0.0
+        },
+        {
+          "name": "switch_offset_Y",
+          "offset": 70,
+          "offset_hex": "0x0046",
+          "hex": "040185db",
+          "value": -7.487457718802842e+16,
+          "reference": 0.0
+        },
+        {
+          "name": "preheat_hotend",
+          "offset": 74,
+          "offset_hex": "0x004A",
+          "hex": "401f",
+          "value": 8000,
+          "reference": 230
+        },
+        {
+          "name": "preheat_bed",
+          "offset": 76,
+          "offset_hex": "0x004C",
+          "hex": "85db",
+          "value": 56197,
+          "reference": 60
+        },
+        {
+          "name": "lcd_brightness",
+          "offset": 78,
+          "offset_hex": "0x004E",
+          "hex": "40",
+          "value": 64,
+          "reference": 90
+        }
+      ],
+      "byte_differences": 40,
+      "unused_differences": 0
+    },
+    {
+      "file": "chip_placa_original_erro_tamanho_offset_v3.bin",
+      "sha256": "47c8eaa84ba48d42a29601730fbf2f5f8050b40334c50fe399c77595b171add8",
+      "blocks": {
+        "USER": {
+          "version_hex": "4d4b41313200",
+          "stored_crc": 24754,
+          "calculated_crc": 24754,
+          "crc_ok": true,
+          "identical_to_reference": false
+        },
+        "SYSTEM": {
+          "version_hex": "534331320000",
+          "stored_crc": 13673,
+          "calculated_crc": 13673,
+          "crc_ok": true,
+          "identical_to_reference": true
+        }
+      },
+      "dir_hex": "00 01 01 01 01 01",
+      "serial_hex": "ffffffffffffffffffffffffffffffffff",
+      "version_hex": "312e302e346e770000",
+      "differences": [
+        {
+          "name": "hotend_1_X",
+          "offset": 46,
+          "offset_hex": "0x002E",
+          "hex": "00000000",
+          "value": 0.0,
+          "reference": -2.200000047683716
+        },
+        {
+          "name": "hotend_1_Y",
+          "offset": 54,
+          "offset_hex": "0x0036",
+          "hex": "00000000",
+          "value": 0.0,
+          "reference": -16.5
+        },
+        {
+          "name": "switch_offset_X",
+          "offset": 66,
+          "offset_hex": "0x0042",
+          "hex": "04013c00",
+          "value": 5.510494107080197e-39,
+          "reference": 0.0
+        },
+        {
+          "name": "switch_offset_Y",
+          "offset": 70,
+          "offset_hex": "0x0046",
+          "hex": "040185db",
+          "value": -7.487457718802842e+16,
+          "reference": 0.0
+        },
+        {
+          "name": "preheat_hotend",
+          "offset": 74,
+          "offset_hex": "0x004A",
+          "hex": "401f",
+          "value": 8000,
+          "reference": 230
+        },
+        {
+          "name": "preheat_bed",
+          "offset": 76,
+          "offset_hex": "0x004C",
+          "hex": "85db",
+          "value": 56197,
+          "reference": 60
+        },
+        {
+          "name": "lcd_brightness",
+          "offset": 78,
+          "offset_hex": "0x004E",
+          "hex": "40",
+          "value": 64,
+          "reference": 90
+        }
+      ],
+      "byte_differences": 40,
+      "unused_differences": 0
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# Local runtime, installed dependencies and generated build intermediates
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+node_modules/
+/build/
+/tools/mka_build/*.o
+/tools/mka_build/*.raw
+.pytest_cache/
+.mypy_cache/
+*.tmp
+*.temp
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# EEPROM images and captures are project inputs and MUST be tracked.
+!imagens/**/*.bin
+!imagens/*.bin
